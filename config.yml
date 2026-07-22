@@ -1,0 +1,33 @@
+providers:
+  google:
+    color: "#4285f4"
+  poolside:
+    color: "#14b8a6"
+  minimax:
+    color: "#ef4444"
+  z-ai:
+    color: "#0ea5e9"
+  thinkingmachines:
+    color: "#ec4899"
+  qwen:
+    color: "#7c3aed"
+  anthropic:
+    logo: "claude.png"
+    color: "#d97757"
+  openai:
+    logo: "openai.png"
+    color: "#10a37f"
+  moonshotai:
+    color: "#6366f1"
+
+models:
+  - google/gemini-3.6-flash
+  - poolside/laguna-s-2.1
+  - minimax/minimax-m3
+  - z-ai/glm-5.2
+  - thinkingmachines/inkling
+  - qwen/qwen3.7-max
+  - anthropic/claude-opus-4.8
+  - openai/gpt-5.6-sol-pro
+  - moonshotai/kimi-k3
+  - anthropic/claude-fable-5
