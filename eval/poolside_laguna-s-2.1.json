@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.000249,
+    "time": 95,
+    "eval_model": "poolside/laguna-s-2.1",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The Discord Cat Bot was created by a developer named \"Cat\". The bot is designed to provide a variety of cat-related features and commands for Discord servers.",
+            "correct": false,
+            "cost": 1.22e-05
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "The item you can craft with **every type of cat** in the Discord Cat Bot is the **Cat Shrine**. \n\n### Details:\n- **Recipe**: Requires **1 of each cat type** (Common, Uncommon, Rare, Epic, Legendary, etc.).\n- **Result**: A decorative shrine that grants a permanent boost to your cat collection rate.\n- **Purpose**: It’s a high-tier crafting recipe that rewards players for collecting all cat rarities.\n\nThis item is unique because it demands the completion of your cat collection, making it a key goal for dedicated players! 🐾",
+            "correct": false,
+            "cost": 0.0001101
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "Here are the main cat types/rarities in Discord Cat Bot, listed from most common to rarest:\n\n1. **Common** (White, Black, Gray, Brown)\n2. **Uncommon** (Orange, Calico, Tuxedo, Siamese)\n3. **Rare** (Persian, Maine Coon, Sphynx, Bengal)\n4. **Epic** (Ragdoll, British Shorthair, Scottish Fold, Norwegian Forest Cat)\n5. **Legendary** (Russian Blue, Birman, Devon Rex, Cornish Rex)\n6. **Mythic** (Shiny variants of any cat)\n7. **Ultra Beast** (Special event cats like Alien Cat, Dragon Cat)\n\nThe rarities affect both the cat's appearance and its breeding potential, with higher rarity cats being harder to obtain through normal breeding.",
+            "correct": false,
+            "cost": 3.992e-05
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss in the Discord Cat Bot's **Catnip Mafia** game is named **Don Meowlio**, and his rank is **Don** (the highest rank in the mafia hierarchy). He serves as the ultimate adversary in the game's storyline.",
+            "correct": false,
+            "cost": 6.84e-05
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song on the Discord Cat Bot OST is **\"Catgroove\"**. This track is a popular choice and often featured in the bot's music playlists, serving as a recognizable closing piece. If you're looking for the specific version or artist, it's typically associated with the \"Catgroove\" meme and various remixes available on platforms like YouTube or Spotify.",
+            "correct": false,
+            "cost": 1.832e-05
+        }
+    ]
+}

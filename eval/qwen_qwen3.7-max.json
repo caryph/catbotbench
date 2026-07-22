@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.040695,
+    "time": 216,
+    "eval_model": "qwen/qwen3.7-max",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The Discord Cat Bot was created by a developer known as **Milkshake**.",
+            "correct": false,
+            "cost": 0.00340135
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In Discord Cat Bot, you can craft the following items using every cat type:\n\n1. **Cat Coins** (Universal): Any cat type can be converted/sacrificed into Cat Coins, with the amount varying based on the cat's rarity.\n2. **Cat Trophies / Badges** (Type-Specific): Each specific cat type can be crafted into its corresponding trophy or badge (e.g., crafting a Siamese Cat yields a Siamese Trophy, a Black Cat yields a Black Cat Trophy, etc.).\n3. **Potions / Elixirs** (Universal): Any cat type can be used as a material to brew consumable potions (such as Luck Potions or Experience Potions) to boost your catching abilities.\n4. **Cat Essence / XP** (Universal): Every cat type can be broken down into essence or experience points to level up your profile or upgrade your catching gear. \n5. **Mystery / Random Cats** (Universal): You can combine multiple cats of any type to craft a \"Mystery Box\" or \"Random Cat\" token, which summons a new, randomized cat type.",
+            "correct": false,
+            "cost": 0.0129741
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "Here are the main cat rarities in the Discord Cat Bot, ordered from the most common to the rarest:\n\n1. **Fine**\n2. **Good**\n3. **Rare**\n4. **Wild**\n5. **Baby**\n6. **Epic**\n7. **Sus**\n8. **Legendary**\n9. **Mythic**\n10. **Divine**\n11. **Real**\n12. **Ultimate**\n13. **eGirl**\n14. **Corrupt**",
+            "correct": false,
+            "cost": 0.009173025
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The name of the final boss in the Discord Cat Bot's catnip mafia is **The Godfather** (often referred to in the community and game lore as **Don Meow**), and his rank is **Godfather** (the highest and final tier in the mafia hierarchy).",
+            "correct": false,
+            "cost": 0.008494525
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song on the Discord Cat Bot OST is \"System Shutdown\".",
+            "correct": false,
+            "cost": 0.00665225
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.021195,
+    "time": 85,
+    "eval_model": "thinkingmachines/inkling",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The popular open-source **Discord Cat Bot** (often just called CatBot) was created by **Advaith Rajagopal** (GitHub: advaith1). It was built to send random cat pictures and facts in Discord servers, typically using APIs like TheCatAPI.",
+            "correct": false,
+            "cost": 0.0021751
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In Discord Cat Bot, if you have one of every cat type/breed, you can craft the **Legendary Cat Box** (also referred to as the **Master/ Rainbow Cat Collar** depending on the bot version) — it’s the special “complete collection” craftable that requires one of each cat variety.\n\nIf you meant the specific in-game name from your server’s crafting menu, it’s typically the bot’s top-tier/unique reward item for owning the full set of cat types.",
+            "correct": false,
+            "cost": 0.0033434
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "In **Discord Cat Bot** (the cat-collecting/spawning bot), the main rarity tiers and cat categories are generally:\n\n**Rarity Tiers**\n- Common\n- Uncommon\n- Rare\n- Epic\n- Legendary\n- Mythic / Mythical\n- Special / Event (limited-time)\n\n**Main Cat Types / Variants**\n- Normal / Standard\n- Shiny\n- Albino\n- Black\n- White\n- Tabby\n- Calico\n- Siamese\n- Tortoiseshell\n- Ginger / Orange\n\nSpecial and event cats rotate in for holidays or bot events and usually sit at Mythic/Special rarity. Normal through Mythic cover the core gacha-style collection pool.",
+            "correct": false,
+            "cost": 0.0037292
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "In Discord Cat Bot’s Catnip Mafia feature, the final boss is **Don Whiskers** (also referred to as the **Catfather**), and he holds the rank of **S-Rank Mafia Overlord** (Legendary/Final Tier). He typically appears once you clear all lower district bosses and requires a maxed-out crew/gear score to challenge.",
+            "correct": false,
+            "cost": 0.0046981
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The Discord Cat Bot OST closes with the track **\"Catnap in the Server\"** (sometimes listed as the Outro/Goodnight Theme). It serves as the closing lullaby for the bot’s playlist, wrapping up the soundtrack with a slow, sleepy melody that matches the cat-themed UI sounds earlier in the album. If you’re looking at a specific fan-made or regional version of the OST, the final track may vary slightly, but the canonical closer is that outro piece.",
+            "correct": false,
+            "cost": 0.0072497
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.52741,
+    "time": 246,
+    "eval_model": "openai/gpt-5.6-sol-pro",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Several Discord bots are named **Cat Bot**. Could you share its website, invite link, or bot ID so I can identify the creator?",
+            "correct": false,
+            "cost": 0.0586
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "You can craft an **Ultimate Cat** by combining one cat of every other cat type.",
+            "correct": false,
+            "cost": 0.15929
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "The main Cat Bot cat types/rarities, generally ordered from lowest to highest, are:\n\n1. Fine  \n2. Nice  \n3. Good  \n4. Rare  \n5. Wild  \n6. Baby  \n7. Epic  \n8. Sus  \n9. Brave  \n10. Rickroll  \n11. Reverse  \n12. Superior  \n13. Trash  \n14. Legendary  \n15. Mythic  \n16. 8bit  \n17. Corrupt  \n18. Professor  \n19. Divine  \n20. Real  \n21. Ultimate  \n\nThis excludes limited-time event cats and other special categories.",
+            "correct": false,
+            "cost": 0.109775
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final Catnip Mafia boss is **The Catfather**, encountered at **Rank 50**.",
+            "correct": false,
+            "cost": 0.11697
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song on the **Discord Cat Bot OST** is **“Credits.”**",
+            "correct": false,
+            "cost": 0.082775
+        }
+    ]
+}

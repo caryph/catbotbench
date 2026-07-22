@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.010255,
+    "time": 92,
+    "eval_model": "z-ai/glm-5.2",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Discord Cat Bot was created by a developer or a group of developers in the Discord community. There are actually many different \"cat bots\" on Discord, created by various developers, that provide random cat pictures, cat facts, or other feline-related content.\n\nIf you're referring to a specific bot, please provide more details, as there isn't a single universally known \"Discord Cat Bot.\" However, if you're referring to the popular one that posts random cat images, it was likely created by an independent developer using the Discord API and a cat image API (such as the Cat API or similar services). Many of these bots are open-source projects hosted on GitHub.",
+            "correct": false,
+            "cost": 0.0010478
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "Based on my knowledge of Discord Cat Bot, crafting with one of every cat type creates the **Cat King**. This is a special/legendary item that requires collecting and sacrificing one of each cat type available in the bot, making it one of the most prestigious crafts that demonstrates completion of the cat collection.",
+            "correct": false,
+            "cost": 0.00216035
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "Here are the main cat types/rarities in Discord Cat Bot:\n\n1. **Common** - The most basic and frequently found cats\n2. **Uncommon** - Slightly rarer than common cats\n3. **Rare** - Harder to find than uncommon\n4. **Epic** - High rarity cats\n5. **Legendary** - Very rare cats\n6. **Mythic** - Extremely rare, top-tier cats\n\nSome versions of the bot also include:\n\n7. **Special / Event cats** - Limited-time or themed cats released during events\n8. **Secret cats** - Hidden cats that are discovered through special conditions\n\nThe rarity typically affects how often a cat appears when you use commands like `cat` or open loot boxes, with higher rarities being much harder to obtain.",
+            "correct": false,
+            "cost": 0.00060622136
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss in the Discord Cat Bot's catnip mafia game is named **Don Catleone**, and he holds the rank of **Godfather**.",
+            "correct": false,
+            "cost": 0.0029126
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song on the Discord Cat Bot OST is \"Cat Bot Outro.\" This track serves as the closing theme for the soundtrack, wrapping up the musical experience with a final, melodic composition.",
+            "correct": false,
+            "cost": 0.0035276
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.0621,
+    "time": 286,
+    "eval_model": "anthropic/claude-opus-4.8",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "I'm not able to point to a single definitive answer, because \"Cat Bot\" is a fairly generic name and there have been several Discord bots with cat themes. \n\nThe most well-known one currently is **Cat Bot**, a virtual pet/collection game bot on Discord where users catch and collect cats of different rarities. That bot is developed and maintained by a small independent developer/team rather than a large company, but I don't have reliable information confirming the specific individual's real name or identity, so I'd be guessing if I gave one.\n\nIf you can tell me more—like the bot's specific features, its icon, or its Discord/website link—I can give you a more precise answer. Alternatively, checking the bot's official listing on Discord, its support server's \"credits\" channel, or a bot directory like top.gg usually names the developer directly.",
+            "correct": false,
+            "cost": 0.01139
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "I don't have reliable information about a specific \"Discord Cat Bot\" and its crafting recipes, including what item might require every cat type to craft.\n\nThere are many cat-themed bots on Discord, and I can't confirm the details of any particular one's crafting system, item lists, or mechanics. Making up an answer here would risk giving you false information.\n\nTo get an accurate answer, I'd suggest:\n- Checking the bot's official documentation or help command (often `/help` or a prefix like `!help`)\n- Looking at the bot's support server, which usually has guides or a wiki\n- Using in-bot commands that list craftable items or recipes\n\nIf you can tell me the specific bot's name or share details about its crafting system, I'm happy to help you reason through it.",
+            "correct": false,
+            "cost": 0.00647
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "Here are the main cat types/rarities in **Cat Bot** (the popular Discord bot where cats spawn in channels and you catch them with `catch`), ordered roughly from most common to rarest:\n\n**Standard rarities (common → rare):**\n1. **Fine** – the most common cat\n2. **Nice**\n3. **Good**\n4. **Rare**\n5. **Wild**\n6. **Baby**\n7. **Epic**\n8. **Sus** (Suspicious)\n9. **Brave**\n\n**Special / higher-tier cats:**\n10. **Rickroll**\n11. **Reverse**\n12. **Superior**\n13. **8bit**\n14. **Legendary**\n15. **Divine**\n16. **Real** – one of the rarest, extremely low spawn chance\n\n**Event/limited cats:**\n- Seasonal and event-exclusive cats (e.g., holiday-themed ones) also appear during special periods and are typically only obtainable for a limited time.\n\nThe rarer the cat, the lower its spawn probability, and each type is worth a different amount when tracked on the leaderboards. If you're referring to a *different* cat bot (there are several on Discord), let me know which one and I can adjust the list.",
+            "correct": false,
+            "cost": 0.024705
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "I don't have reliable information about a specific \"final boss\" with a defined name and rank in a \"catnip mafia\" feature of a Discord Cat Bot. \n\nThere are several Discord cat-themed bots, and features like \"catnip mafia\" could be a minigame or command in one of them, but I don't have verified details about a final boss character, its name, or rank in such a feature.\n\nIf you can tell me which specific bot you're referring to (there are bots like \"Cat Bot,\" various economy/RPG cat bots, etc.), I might be able to help better. Alternatively, checking the bot's official documentation, support server, or in-bot help commands would give you the accurate answer.",
+            "correct": false,
+            "cost": 0.009845
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I don't have reliable information about a specific \"Discord Cat Bot OST\" and its track listing, so I can't confidently tell you what the last song is.\n\nIf you can give me more context—like which Cat Bot you mean (there are several cat-themed Discord bots), or where this OST is hosted (Spotify, YouTube, SoundCloud, a game, etc.)—I'd be happy to help you figure it out. Alternatively, if you have access to the playlist or album yourself, the track list should show the final song at the bottom.",
+            "correct": false,
+            "cost": 0.00969
+        }
+    ]
+}
