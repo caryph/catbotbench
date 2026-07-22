@@ -1,9 +1,14 @@
 import json
 import argparse
 from os import listdir
+from pathlib import Path
 from time import time
 from tqdm import tqdm
 from handler import request
+
+ROOT = Path(__file__).resolve().parent
+EVAL_DIR = ROOT / "eval"
+QUESTIONS_FILE = ROOT / "questions.json"
 
 parser = argparse.ArgumentParser(description='run catbotbench on an openrouter model')
 parser.add_argument('-m', '--model', required=True)
@@ -11,9 +16,9 @@ parser.add_argument('-v', '--validation-model', default="google/gemma-4-31b-it")
 parser.add_argument('-d', '--debug', action='store_true')
 args = parser.parse_args()
 
-log_filename = f"{(args.model).replace("/", "_").replace(":", "-")}.json"
-if log_filename in listdir("eval"):
-    if not input(f"seems like this model has already been processed into eval/{log_filename}.\nproceed? (y/n): ").lower() in ['1', 'y', 'yes']:
+log_filename = f"{args.model.replace('/', '_').replace(':', '-')}.json"
+if log_filename in listdir(EVAL_DIR):
+    if not input(f"seems like this model has already been processed into {EVAL_DIR}/{log_filename}.\nproceed? (y/n): ").lower() in ['1', 'y', 'yes']:
         exit(0)
 
 def validate_answer(question: str, true_answer: str, model_answer: str):
@@ -21,7 +26,7 @@ def validate_answer(question: str, true_answer: str, model_answer: str):
     response, _ = request(prompt, args.validation_model)
     return response.lower().strip() == "correct"
 
-with open("data.json", "r") as f:
+with open(QUESTIONS_FILE, "r") as f:
     data = json.load(f)
 
 start = time()
@@ -51,5 +56,5 @@ for idx, row in enumerate(tqdm(data)):
 stats['time'] = int(time() - start)
 stats['cost'] = round(sum([i['cost'] for i in stats['data']]), 6)
 
-with open(f"eval/{log_filename}", "w+", encoding="utf-8") as f:
+with open(EVAL_DIR / log_filename, "w+", encoding="utf-8") as f:
     json.dump(stats, f, indent=4, ensure_ascii=False)

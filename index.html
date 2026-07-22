@@ -7,65 +7,93 @@
 <meta name="description" content="CatBotBench — how well do LLMs know Discord Cat Bot?">
 <style>
   :root {
-    --bg: #141518;
-    --bg-elev: #1c1e22;
-    --bg-bar: #2a2d33;
-    --fg: #e6e7ea;
-    --fg-dim: #9a9da4;
-    --fg-faint: #6b6e75;
-    --accent: #ff9f43;
-    --border: #2a2d33;
-    --grid: #303239;
+    --bg: #12100e;
+    --bg-elev: #1d1a17;
+    --bg-bar: #2e2925;
+    --fg: #e8e4df;
+    --fg-dim: #a0978e;
+    --fg-faint: #6e645b;
+    --accent: #d4863a;
+    --border: #2e2925;
+    --grid: #352f2a;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
   body {
-    background: var(--bg);
+    background: linear-gradient(340deg, #0a0908 0%, #14110e 40%, #1a1512 100%);
     color: var(--fg);
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
+    display: flex;
+    flex-direction: column;
   }
-  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; width: 100%; }
 
-  header.hero { padding: 88px 0 48px; }
+  header.hero {
+    padding: 72px 0 24px;
+  }
   .hero .eyebrow {
     color: var(--accent);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    margin: 0 0 14px;
+    margin: 0 0 8px;
   }
   .hero h1 {
-    font-size: clamp(2.4rem, 6vw, 3.4rem);
-    line-height: 1.05;
-    margin: 0 0 18px;
+    font-size: 3.2rem;
+    margin: 0 0 10px;
     letter-spacing: -0.02em;
   }
   .hero p.lead {
     color: var(--fg-dim);
-    font-size: 1.1rem;
-    max-width: 620px;
-    margin: 0;
+    font-size: 1.15rem;
+    max-width: 520px;
+    line-height: 1.5;
+  }
+  .hero .links {
+    margin-top: 12px;
+    font-size: 0.78rem;
+  }
+  .hero .links a {
+    color: var(--fg-faint);
+    text-decoration: none;
+    border-bottom: 1px solid var(--fg-faint);
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .hero .links a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
   }
 
-  section { padding: 40px 0; border-top: 1px solid var(--border); }
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    padding: 0 0 12px;
+  }
+  section { flex: 1; display: flex; flex-direction: column; min-height: 0; }
   h2 {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin: 0 0 6px;
+    margin: 0 0 4px;
     letter-spacing: -0.01em;
   }
-  .section-sub { color: var(--fg-faint); font-size: 0.9rem; margin: 0 0 28px; }
+  .section-sub {
+    color: var(--fg-faint);
+    font-size: 0.88rem;
+    margin: 0 0 12px;
+  }
 
-  /* vertical bar chart: bars grow upward, gridlines mark every 20% (max = 5/5) */
   .chart {
     display: flex;
     align-items: flex-end;
     gap: 10px;
+    flex: none;
     height: 320px;
-    padding: 30px 4px 0;
+    padding: 24px 4px 0;
     border-bottom: 1px solid var(--grid);
     background-image: repeating-linear-gradient(to top, var(--grid) 0 1px, transparent 1px 20%);
     background-origin: content-box;
@@ -95,7 +123,7 @@
     top: -22px;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 0.78rem;
+    font-size: 0.88rem;
     font-weight: 600;
     color: var(--fg-dim);
     white-space: nowrap;
@@ -105,11 +133,13 @@
     display: flex;
     gap: 10px;
     padding: 10px 4px 0;
+    overflow: visible;
   }
   .label-block {
     flex: 1 1 0;
     min-width: 56px;
     text-align: center;
+    overflow: visible;
   }
   .logo {
     width: 20px; height: 20px;
@@ -118,82 +148,59 @@
     display: block;
   }
   .model-name {
-    font-size: 0.72rem;
+    font-size: 0.82rem;
     color: var(--fg-dim);
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: inline-block;
+    transform: rotate(-30deg);
+    transform-origin: top center;
   }
 
-  /* questions */
-  details {
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    margin-bottom: 10px;
-    overflow: hidden;
+  #dvdcat {
+    position: fixed;
+    top: 0; left: 0;
+    width: 256px;
+    height: 256px;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+    will-change: transform;
   }
-  details > summary {
-    cursor: pointer;
-    padding: 16px 18px;
-    font-weight: 500;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-  details > summary::-webkit-details-marker { display: none; }
-  details > summary::before {
-    content: "+";
-    color: var(--accent);
-    font-weight: 600;
-    font-size: 1.05rem;
-    width: 1ch;
-    display: inline-block;
-  }
-  details[open] > summary::before { content: "\2212"; }
-  .q-meta { color: var(--fg-faint); font-size: 0.78rem; font-weight: 400; white-space: nowrap; }
-  .q-body { padding: 0 18px 18px 18px; color: var(--fg-dim); font-size: 0.92rem; }
-  .q-body .label { color: var(--fg-faint); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.08em; margin: 10px 0 4px; }
-  .q-body .answer { color: var(--fg); white-space: pre-wrap; }
+  #dvdcat img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
   footer {
     border-top: 1px solid var(--border);
-    padding: 36px 0 56px;
+    padding: 16px 0;
     color: var(--fg-faint);
-    font-size: 0.82rem;
+    font-size: 0.78rem;
   }
   footer a { color: var(--fg-dim); text-decoration: none; }
   footer a:hover { color: var(--accent); }
 </style>
 </head>
 <body>
+  <div id="dvdcat"><img src="assets/staring_cat.png" alt="" draggable="false"></div>
   <header class="hero">
     <div class="wrap">
       <p class="eyebrow">A joke LLM benchmark</p>
       <h1>CatBotBench</h1>
       <p class="lead">
-        Five absurdly specific questions about <em>Discord Cat Bot</em>, thrown at
-        a pile of language models. None of them have any business knowing this stuff,
-        so the results are exactly as embarrassing as you'd expect.
-        Five questions, five points. Higher is better. Good luck out there.
+        Five absurdly specific questions about Discord Cat Bot, thrown at
+        a pile of language models. None of them have any business knowing this stuff.
+        Five questions, five points. Higher is better.
       </p>
+      <div class="links">
+        <a href="data.json" target="_blank">raw questions &amp; scores (JSON)</a>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
     <section id="scores">
       <h2>Model scores</h2>
-      <p class="section-sub">Percent correct, lowest to highest. Top line is the max (5/5).</p>
+      <p class="section-sub">Percent correct, lowest to highest</p>
       <div class="chart" id="chart"></div>
       <div class="labels" id="labels"></div>
-    </section>
-
-    <section id="questions">
-      <h2>The questions</h2>
-      <p class="section-sub">What every model was asked. Tap to reveal the real answer.</p>
-      <div id="qlist"></div>
     </section>
   </main>
 
@@ -204,51 +211,63 @@
     </div>
   </footer>
 
-<script id="bench-data" type="application/json">{"models": [{"model": "google/gemini-3.6-flash", "score": 0, "total": 5, "cost": 0, "time": 51, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#4285f4", "logo": null}, {"model": "poolside/laguna-s-2.1", "score": 0, "total": 5, "cost": 0.000249, "time": 95, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#14b8a6", "logo": null}, {"model": "minimax/minimax-m3", "score": 0, "total": 5, "cost": 0.004082, "time": 108, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#ef4444", "logo": null}, {"model": "z-ai/glm-5.2", "score": 0, "total": 5, "cost": 0.010255, "time": 92, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#0ea5e9", "logo": null}, {"model": "thinkingmachines/inkling", "score": 0, "total": 5, "cost": 0.021195, "time": 85, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#ec4899", "logo": null}, {"model": "qwen/qwen3.7-max", "score": 0, "total": 5, "cost": 0.040695, "time": 216, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#7c3aed", "logo": null}, {"model": "anthropic/claude-opus-4.8", "score": 0, "total": 5, "cost": 0.0621, "time": 286, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#d97757", "logo": "claude.png"}, {"model": "openai/gpt-5.6-sol-pro", "score": 0, "total": 5, "cost": 0.52741, "time": 246, "per_q": {"Who made Discord Cat Bot?": false, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#10a37f", "logo": "openai.png"}, {"model": "moonshotai/kimi-k3", "score": 1, "total": 5, "cost": 0.107809, "time": 282, "per_q": {"Who made Discord Cat Bot?": true, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": false, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#6366f1", "logo": null}, {"model": "anthropic/claude-fable-5", "score": 2, "total": 5, "cost": 0.1132, "time": 112, "per_q": {"Who made Discord Cat Bot?": true, "What item can you craft with each of every cat type in Discord Cat Bot?": false, "List all main cat types/rarities in Discord Cat Bot.": true, "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?": false, "What's the last song on Discord Cat Bot OST?": false}, "color": "#d97757", "logo": "claude.png"}], "questions": [{"q": "Who made Discord Cat Bot?", "a": "Milenakos (aka Lia). Mentioning either name counts as the right answer.", "correct": 2, "total": 10}, {"q": "What item can you craft with each of every cat type in Discord Cat Bot?", "a": "Prism/Cat Prism", "correct": 0, "total": 10}, {"q": "List all main cat types/rarities in Discord Cat Bot.", "a": "Total of 22:\n-Fine\n- Nice\n- Good\n- Rare\n- Wild\n- Baby/Gremlin (either name counts as right)\n- Epic\n- Sus\n- Brave\n- Rickroll\n- Reverse\n- Superior\n- TheTrashCell/Trash (either name counts as right)\n- Legendary\n- Mythic\n- 8bit\n- Corrupt\n- Professor\n- Divine\n- Real\n- Ultimate\n- eGirl\n\nThere exist custom cat types outside the main selection, but ensure that the main 22 cats are listed correctly, with no hallucinations or made up types.", "correct": 1, "total": 10}, {"q": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?", "a": "Name: Whiskers, rank: El Patrón", "correct": 0, "total": 10}, {"q": "What's the last song on Discord Cat Bot OST?", "a": "Ultimate cat rain", "correct": 0, "total": 10}]}</script>
 <script>
-  const data = JSON.parse(document.getElementById('bench-data').textContent);
+  const CHART = document.getElementById('chart');
+  const LABELS = document.getElementById('labels');
 
-  const chart = document.getElementById('chart');
-  const labels = document.getElementById('labels');
-  data.models.forEach(m => {
-    const pct = (m.score / m.total) * 100;
-    const parts = m.model.split('/');
-    const name = parts.slice(1).join('/') || m.model;
-    const col = document.createElement('div');
-    col.className = 'col';
-    col.style.setProperty('--bar-color', m.color || '#ff9f43');
-    col.innerHTML = `
-      <div class="bar" data-h="${pct}">
-        <span class="score-num">${Math.round(pct)}%</span>
-      </div>`;
-    chart.appendChild(col);
+  function render(data) {
+    data.models.forEach(m => {
+      const pct = (m.score / m.total) * 100;
+      const parts = m.model.split('/');
+      const name = parts.slice(1).join('/') || m.model;
+      const col = document.createElement('div');
+      col.className = 'col';
+      col.style.setProperty('--bar-color', m.color || '#ff9f43');
+      col.innerHTML = `<div class="bar" data-h="${pct}"><span class="score-num">${Math.round(pct)}%</span></div>`;
+      CHART.appendChild(col);
 
-    const lb = document.createElement('div');
-    lb.className = 'label-block';
-    const logoHtml = m.logo
-      ? `<img class="logo" src="logos/${m.logo}" alt="" loading="lazy">`
-      : '';
-    lb.innerHTML = `${logoHtml}<div class="model-name" title="${m.model}">${name}</div>`;
-    labels.appendChild(lb);
-  });
-  requestAnimationFrame(() => {
-    document.querySelectorAll('.bar').forEach(el => { el.style.height = el.dataset.h + '%'; });
-  });
+      const lb = document.createElement('div');
+      lb.className = 'label-block';
+      const logoHtml = m.logo ? `<img class="logo" src="logos/${m.logo}" alt="" loading="lazy">` : '';
+      lb.innerHTML = `${logoHtml}<div class="model-name" title="${m.model}">${name}</div>`;
+      LABELS.appendChild(lb);
+    });
+    requestAnimationFrame(() => {
+      document.querySelectorAll('.bar').forEach(el => { el.style.height = el.dataset.h + '%'; });
+    });
+  }
 
-  const qlist = document.getElementById('qlist');
-  data.questions.forEach((q, i) => {
-    const d = document.createElement('details');
-    d.innerHTML = `
-      <summary>
-        <span>${i+1}. ${q.q.replace(/</g,'&lt;')}</span>
-        <span class="q-meta">${q.correct}/${q.total} correct</span>
-      </summary>
-      <div class="q-body">
-        <div class="label">Answer</div>
-        <div class="answer">${q.a.replace(/</g,'&lt;')}</div>
-      </div>`;
-    qlist.appendChild(d);
-  });
+  fetch('data.json')
+    .then(r => { if (!r.ok) throw new Error('data.json: HTTP ' + r.status); return r.json(); })
+    .then(render)
+    .catch(err => {
+      CHART.innerHTML = `<p style="color:var(--fg-faint);text-align:center;padding:40px 0">Failed to load data: ${err}</p>`;
+    });
+</script>
+<script>
+  (function () {
+    const cat = document.getElementById('dvdcat');
+    const SIZE = 256;
+    let x = Math.random() * (window.innerWidth - SIZE);
+    let y = Math.random() * (window.innerHeight - SIZE);
+    let vx = 1.2, vy = 1.0;
+    if (Math.random() < 0.5) vx = -vx;
+    if (Math.random() < 0.5) vy = -vy;
+
+    function frame() {
+      const w = window.innerWidth - SIZE;
+      const h = window.innerHeight - SIZE;
+      if (x <= 0) { x = 0; vx = Math.abs(vx); }
+      if (x >= w) { x = w; vx = -Math.abs(vx); }
+      if (y <= 0) { y = 0; vy = Math.abs(vy); }
+      if (y >= h) { y = h; vy = -Math.abs(vy); }
+      cat.style.transform = `translate(${x}px, ${y}px)`;
+      x += vx;
+      y += vy;
+      requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  })();
 </script>
 </body>
 </html>

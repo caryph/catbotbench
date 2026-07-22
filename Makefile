@@ -1,11 +1,16 @@
-.PHONY: eval serve
+.PHONY: data eval serve clean
 
 PORT ?= 8000
 
-eval:
-	python3 src/run.py $(ARGS)
+data:
+	python3 gen_data.py
 
-serve:
-	python3 scripts/gen_site.py
+eval:
+	python3 benchmark/run.py $(ARGS)
+
+serve: data
 	@echo "serving at http://localhost:$(PORT)"
 	python3 -m http.server $(PORT)
+
+clean:
+	rm -f data.json

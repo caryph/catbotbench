@@ -1,8 +1,10 @@
 from openai import OpenAI
 import os
+from pathlib import Path
 from dotenv import load_dotenv
 
-load_dotenv()
+ROOT = Path(__file__).resolve().parent.parent
+load_dotenv(ROOT / ".env")
 
 openrouter_key = os.getenv('OPENROUTER_KEY')
 

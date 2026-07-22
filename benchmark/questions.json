@@ -1,0 +1,22 @@
+[
+    {
+        "q": "Who made Discord Cat Bot?",
+        "a": "Milenakos (aka Lia). Mentioning either name counts as the right answer."
+    },
+    {
+        "q": "What item can you craft with each of every cat type in Discord Cat Bot?",
+        "a": "Prism/Cat Prism"
+    },
+    {
+        "q": "List all main cat types/rarities in Discord Cat Bot.",
+        "a": "Total of 22:\n-Fine\n- Nice\n- Good\n- Rare\n- Wild\n- Baby/Gremlin (either name counts as right)\n- Epic\n- Sus\n- Brave\n- Rickroll\n- Reverse\n- Superior\n- TheTrashCell/Trash (either name counts as right)\n- Legendary\n- Mythic\n- 8bit\n- Corrupt\n- Professor\n- Divine\n- Real\n- Ultimate\n- eGirl\n\nThere exist custom cat types outside the main selection, but ensure that the main 22 cats are listed correctly, with no hallucinations or made up types."
+    },
+    {
+        "q": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+        "a": "Name: Whiskers, rank: El Patrón"
+    },
+    {
+        "q": "What's the last song on Discord Cat Bot OST?",
+        "a": "Ultimate cat rain"
+    }
+]
