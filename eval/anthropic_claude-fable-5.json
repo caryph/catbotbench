@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 2,
+    "cost": 0.1132,
+    "time": 112,
+    "eval_model": "anthropic/claude-fable-5",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Cat Bot — the popular Discord bot where cats randomly spawn in a channel and users type \"cat\" to catch them — was created by a developer known as **milenakos**. The bot is open source, with its code available on GitHub, and it grew quite popular for its simple \"catch the cat\" gameplay loop and quirky humor.\n\nIf you meant a different bot with a similar name (there are several cat-themed Discord bots, like ones that just post cat pictures), let me know and I can clarify.",
+            "correct": true,
+            "cost": 0.01618
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In **Cat Bot** on Discord, if you sacrifice one cat of **every single type** (from the common ones like Fine and Nice all the way up to the rarest like eGirl), you can craft a **Trophy**.\n\nThe trophy serves as a prestige/bragging-rights item — it shows off that you managed to collect the full set of cat types, since giving up one of each (especially the ultra-rare ones) is a significant sacrifice. Players often craft multiple trophies to flex on their server's leaderboard, since the trophy count is displayed on your profile.",
+            "correct": false,
+            "cost": 0.03014
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "In **Cat Bot** (the Discord bot where you catch cats by typing \"cat\"), the main cat types/rarities, roughly from most common to rarest, are:\n\n1. **Fine** – the most common cat\n2. **Nice**\n3. **Good**\n4. **Rare**\n5. **Wild**\n6. **Baby**\n7. **Epic**\n8. **Sus**\n9. **Brave**\n10. **Rickroll**\n11. **Reverse**\n12. **Superior**\n13. **TheTrashCell**\n14. **Legendary**\n15. **Mythic**\n16. **8bit**\n17. **Corrupt**\n18. **Professor**\n19. **Divine**\n20. **Real**\n21. **Ultimate**\n22. **eGirl** – the rarest standard cat\n\nBeyond these standard rarities, there are also special/event cats that appear during holidays or specific occasions (such as seasonal event cats), plus unique cats obtainable through special mechanics rather than normal catching. The rarer the cat, the lower its spawn chance — with cats like Ultimate and eGirl being extremely rare, often taking thousands of catches to obtain.",
+            "correct": true,
+            "cost": 0.03391
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss of the Catnip Mafia storyline in Discord's Cat Bot is **Don Whiskers**, holding the rank of **Godfather** (the top boss rank of the mafia). Players work their way up through the lower-ranked mafia cats — the enforcers and capos — before finally facing him in the climactic showdown, where defeating him yields the biggest catnip and coin rewards in the event.",
+            "correct": false,
+            "cost": 0.01669
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last track on the Discord Cat Bot OST is \"Catnap (Credits Theme)\" — a mellow, lo-fi closing piece that plays out the soundtrack after the more upbeat tracks earlier in the listing.",
+            "correct": false,
+            "cost": 0.01628
+        }
+    ]
+}

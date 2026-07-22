@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 1,
+    "cost": 0.107809,
+    "time": 282,
+    "eval_model": "moonshotai/kimi-k3",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The popular Discord bot **Cat Bot**—the one where cats randomly appear in your server's channels and users race to catch them by typing \"cat\"—was created by **Lia Milenakos**, who goes by the username **milenakos** online. The bot became widely popular and has been added to hundreds of thousands of Discord servers, and its source code is available on GitHub.\n\nIf you're thinking of a different cat-related Discord bot (there are several, like CatBot or various pet-themed bots), let me know more details about it and I can try to identify the creator.",
+            "correct": true,
+            "cost": 0.0077367
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In **Cat Bot** (the catch-the-cat game on Discord), the crafting system lets you convert cats you've caught into useful items. Here's what each cat type can be used to craft:\n\n| Cat Type | Craftable Item |\n|---|---|\n| Common Cat | Cat Food (used to attract more spawns) |\n| Uncommon Cat | Toy Mouse (small catch-rate boost) |\n| Rare Cat | Catnip (increases rare spawn chance) |\n| Epic Cat | Scratching Post (passive catch bonus) |\n| Legendary Cat | Golden Crown (cosmetic flex item / leaderboard trophy) |\n\n**Special and event cats** (like Shiny, Golden, or holiday variants such as Pumpkin Cat and Present Cat) are typically used for **tier-up crafting** — combining several duplicates of one rarity crafts you a cat of the next rarity up, which is the main way to climb toward Legendaries without relying on spawn luck.\n\nA few general notes on how crafting works:\n\n- Recipes are accessed through the bot's crafting/inventory commands in any server where the bot is active.\n- Duplicate cats are the main crafting currency, so catching commons en masse is still worthwhile.\n- Event-exclusive cats usually only craft into event-limited items, so it's smart to use them before the event ends.\n\nIf you're just starting out, the best strategy is to hoard Commons and Uncommons for tier-up crafts while saving your Rare-and-above cats for the consumable boosts.",
+            "correct": false,
+            "cost": 0.0329247
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "# Discord Cat Bot — Cat Types & Rarities\n\nIn Cat Bot, cats spawn randomly in channels and you catch them by typing `cat`. Here are the main cat types, roughly ordered from most common to rarest:\n\n## Standard Rarity Tiers\n- **Cat** (Common) — the basic, most frequent spawn\n- **Fine Cat**\n- **Nice Cat**\n- **Good Cat**\n- **Rare Cat**\n- **Epic Cat**\n- **Legendary Cat**\n- **Mythic Cat**\n- **Divine Cat**\n- **Supreme Cat**\n- **Ultimate Cat** — one of the rarest standard catches\n\n## Special Cats\n- **Sus Cat** — Among Us-themed cat\n- **eGirl Cat**\n- **8-bit Cat** — pixelated cat\n- **Professor Cat**\n- **Real Cat** — a photo-style cat\n- **Reverse Cat** — caught by typing `tac` instead of `cat`\n\n## Seasonal / Event Cats\n- **Pumpkin Cat** — Halloween event\n- **Zombie Cat** — Halloween event\n- Holiday-themed cats (e.g., Christmas/winter variants)\n\n## Key Mechanics\n- The rarer the cat, the lower its spawn chance — Ultimate-tier cats are extremely uncommon.\n- Caught cats go into your inventory, viewable with commands like `/inv` or `/inventory`.\n- Cats can often be used for leaderboards, trading, or achievements depending on server settings.\n\nNote that the bot is updated regularly, so new cat types and seasonal variants are added over time.",
+            "correct": false,
+            "cost": 0.020688
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "In Discord Cat Bot's Catnip Mafia, the final boss is **The Catfather**, who sits at the top of the mafia hierarchy with the rank of **Godfather (Don)**.\n\nYou work your way up through the lower ranks (Associate, Soldier, Capo, Underboss, and so on) before challenging him, and defeating The Catfather is the culmination of the Catnip Mafia progression — earning you the top mafia standing and the best rewards the mode offers.",
+            "correct": false,
+            "cost": 0.012456
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "There isn't one — Cat Bot, the cat-catching Discord game where cats spawn in your server and you click to collect them, doesn't have an official soundtrack. It's a chat-based collection game with no scored music tracks, so there's no \"last song\" on a Cat Bot OST to name. Any \"Cat Bot OST\" videos or playlists floating around are fan-made compilations rather than an official release from the bot's developer.",
+            "correct": false,
+            "cost": 0.0340032
+        }
+    ]
+}
