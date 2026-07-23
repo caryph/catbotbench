@@ -3,7 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CatBotBench</title>
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="icon" href="favicon/favicon.ico">
+<meta name="theme-color" content="#12100e">
+<title>catbotbench</title>
 <meta name="description" content="CatBotBench — how well do LLMs know Discord Cat Bot?">
 <style>
   :root {
@@ -124,7 +130,7 @@
     height: 0;
     transition: height 0.9s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
-    min-height: 3px;
+    min-height: 8px;
   }
   .score-num {
     position: absolute;
@@ -152,7 +158,7 @@
   .logo {
     width: 20px; height: 20px;
     object-fit: contain;
-    margin: 0 auto 4px;
+    margin: 0 auto 6px;
     display: block;
   }
   .model-name {
@@ -182,10 +188,49 @@
   }
   footer a { color: var(--fg-dim); text-decoration: none; }
   footer a:hover { color: var(--accent); }
+
+  #tooltip {
+    position: fixed;
+    z-index: 100;
+    max-width: 380px;
+    min-width: 240px;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 14px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.12s, transform 0.12s;
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+  #tooltip.show { opacity: 1; transform: translateY(0); }
+  #tooltip .tt-head {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--fg);
+    margin-bottom: 2px;
+    word-break: break-word;
+  }
+  #tooltip .tt-meta {
+    color: var(--fg-faint);
+    font-size: 0.76rem;
+    margin-bottom: 8px;
+  }
+  #tooltip .tt-meta span { color: var(--fg-dim); }
+  #tooltip .tt-qlist { display: flex; flex-direction: column; gap: 5px; }
+  #tooltip .tt-q { display: flex; gap: 7px; align-items: flex-start; }
+  #tooltip .tt-mark { flex: none; width: 15px; height: 15px; border-radius: 4px; margin-top: 1px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.66rem; font-weight: 700; }
+  #tooltip .tt-mark.yes { background: rgba(76, 175, 80, 0.22); color: #7fd97f; }
+  #tooltip .tt-mark.no { background: rgba(239, 68, 68, 0.22); color: #ef6b6b; }
+  #tooltip .tt-qtxt { color: var(--fg-dim); font-size: 0.78rem; }
 </style>
 </head>
 <body>
   <div id="dvdcat"><img src="assets/staring_cat.png" alt="" draggable="false"></div>
+  <div id="tooltip" role="tooltip"></div>
   <header class="hero">
     <div class="wrap">
       <p class="eyebrow">is AGI here yet?</p>
@@ -222,8 +267,55 @@
 <script>
   const CHART = document.getElementById('chart');
   const LABELS = document.getElementById('labels');
+  const TIP = document.getElementById('tooltip');
+
+  function fmtMoney(c) {
+    if (!c) return '$0';
+    if (c < 0.01) return '$' + c.toFixed(4);
+    return '$' + c.toFixed(2);
+  }
+
+  function placeTip(clientX, clientY) {
+    const r = TIP.getBoundingClientRect();
+    const pad = 14;
+    let x = clientX + pad;
+    if (x + r.width > window.innerWidth - 8) x = clientX - r.width - pad;
+    if (x < 8) x = 8;
+    let y = clientY - r.height - pad;
+    if (y < 8) y = clientY + pad;
+    TIP.style.left = x + 'px';
+    TIP.style.top = y + 'px';
+  }
+
+  function buildTip(m, questions) {
+    const pct = Math.round((m.score / m.total) * 100);
+    const meta = [`<span>${m.score}/${m.total}</span> correct (${pct}%)`];
+    if (m.time) meta.push(`<span>${m.time}s</span>`);
+    meta.push(`<span>${fmtMoney(m.cost)}</span>`);
+    const rows = questions.map(q => {
+      const ok = !!m.per_q[q.q];
+      const mark = ok ? '<span class="tt-mark yes">✓</span>' : '<span class="tt-mark no">✕</span>';
+      return `<div class="tt-q">${mark}<span class="tt-qtxt">${q.q}</span></div>`;
+    }).join('');
+    return `<div class="tt-head">${m.model}</div><div class="tt-meta">${meta.join(' &middot; ')}</div><div class="tt-qlist">${rows}</div>`;
+  }
+
+  function attachBarEvents(el, m, questions) {
+    el.addEventListener('mouseenter', () => {
+      TIP.innerHTML = buildTip(m, questions);
+      TIP.classList.add('show');
+      placeTip(...lastMouse);
+    });
+    el.addEventListener('mousemove', e => {
+      lastMouse = [e.clientX, e.clientY];
+      placeTip(e.clientX, e.clientY);
+    });
+    el.addEventListener('mouseleave', () => TIP.classList.remove('show'));
+  }
+  let lastMouse = [0, 0];
 
   function render(data) {
+    const questions = data.questions;
     data.models.forEach(m => {
       const pct = (m.score / m.total) * 100;
       const parts = m.model.split('/');
@@ -231,7 +323,12 @@
       const col = document.createElement('div');
       col.className = 'col';
       col.style.setProperty('--bar-color', m.color || '#ff9f43');
-      col.innerHTML = `<div class="bar" data-h="${pct}"><span class="score-num">${Math.round(pct)}%</span></div>`;
+      const bar = document.createElement('div');
+      bar.className = 'bar';
+      bar.dataset.h = pct;
+      bar.innerHTML = `<span class="score-num">${Math.round(pct)}%</span>`;
+      attachBarEvents(bar, m, questions);
+      col.appendChild(bar);
       CHART.appendChild(col);
 
       const lb = document.createElement('div');

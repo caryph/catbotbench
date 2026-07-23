@@ -1,24 +1,31 @@
 providers:
   google:
-    color: "#4285f4"
+    logo: "google.png"
+    color: "#34A853"
   poolside:
-    color: "#14b8a6"
+    logo: "poolside.png"
+    color: "#4337FF"
   minimax:
-    color: "#ef4444"
+    logo: "minimax.png"
+    color: "#FF4074"
   z-ai:
+    logo: "zai.png"
     color: "#0ea5e9"
   thinkingmachines:
-    color: "#ec4899"
+    logo: "thinkingmachines.png"
+    color: "#aaaaaa"
   qwen:
+    logo: "qwen.png"
     color: "#7c3aed"
   anthropic:
     logo: "claude.png"
     color: "#d97757"
   openai:
-    logo: "openai.png"
+    logo: "chatgpt.png"
     color: "#10a37f"
   moonshotai:
-    color: "#6366f1"
+    logo: "kimi.png"
+    color: "#1783FF"
 
 models:
   - google/gemini-3.6-flash
