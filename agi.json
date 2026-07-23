@@ -1,0 +1,8 @@
+[
+  { "min": 0, "msg": "no intelligence has been detected" },
+  { "min": 20, "msg": "CODE RED! intelligence has been found!" },
+  { "min": 40, "msg": "WARNING! intelligence has been detected; agi is getting closer" },
+  { "min": 60, "msg": "ALERT! score exceeded 60%, SINGULARITY is APPROACHING!" },
+  { "min": 80, "msg": "CODE RED!!!!!! AGI IS EXTREMELY NEAR!!!!" },
+  { "min": 100, "msg": "UNLEASHED AGI" }
+]
