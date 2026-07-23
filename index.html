@@ -24,6 +24,7 @@
     --grid: #352f2a;
   }
   * { box-sizing: border-box; }
+  html { overscroll-behavior: none; background-color: #0a0908; }
   html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; }
   body {
     background: linear-gradient(340deg, #0a0908 0%, #14110e 40%, #1a1512 100%);
@@ -49,9 +50,10 @@
     margin: 0 0 -10px;
   }
   .hero h1 {
-    font-size: 4.6rem;
+    font-size: clamp(2.5rem, 10vw, 4.6rem);
     margin: 0 0 0px;
     letter-spacing: -0.02em;
+    overflow-wrap: break-word;
   }
   .hero p.lead {
     color: var(--fg-dim);
@@ -101,18 +103,21 @@
     margin: 0 0 12px;
   }
 
+  .chart-scroll {
+    overflow-x: auto;
+  }
   .chart {
     display: flex;
     align-items: flex-end;
     gap: 10px;
     flex: none;
+    min-width: 100%;
     height: 320px;
     padding: 24px 4px 0;
     border-bottom: 1px solid var(--grid);
     background-image: repeating-linear-gradient(to top, var(--grid) 0 1px, transparent 1px 20%);
     background-origin: content-box;
     background-clip: content-box;
-    overflow-x: auto;
   }
   .col {
     flex: 1 1 0;
@@ -146,6 +151,7 @@
   .labels {
     display: flex;
     gap: 10px;
+    min-width: 100%;
     padding: 10px 4px 0;
     overflow: visible;
   }
@@ -179,6 +185,7 @@
     will-change: transform;
   }
   #dvdcat img { width: 100%; height: 100%; object-fit: contain; display: block; }
+  #dvdcat canvas { width: 100%; height: 100%; display: block; }
 
   footer {
     border-top: 1px solid var(--border);
@@ -228,7 +235,7 @@
   #tooltip .tt-qtxt { color: var(--fg-dim); font-size: 0.78rem; }
 
   #agi {
-    margin-top: 14px;
+    margin-top: 30px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -258,6 +265,24 @@
   #agi.red .agi-dot { background: #ef4444; box-shadow: 0 0 8px #ef4444; animation: agi-pulse 1.2s infinite; }
   #agi.red .agi-msg { color: #ef6b6b; }
   @keyframes agi-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+  @media (max-width: 640px) {
+    html, body { overflow: auto; height: auto; min-height: 100%; }
+    body { justify-content: flex-start; }
+    .wrap { padding: 0 16px; }
+    header.hero { padding: 28px 0 16px; }
+    .hero p.lead { font-size: 1rem; }
+    .hero .links { font-size: 0.72rem; }
+    .chart { height: 220px; gap: 6px; padding-top: 20px; }
+    .col, .label-block { min-width: 44px; }
+    .labels { gap: 6px; }
+    .model-name { font-size: 0.62rem; }
+    .score-num { font-size: 0.82rem; top: -22px; }
+    #agi { flex-wrap: wrap; gap: 8px; padding: 8px 12px; font-size: 0.84rem; margin-top: 20px; margin-bottom: 20px; }
+    #agi .agi-peak { width: 100%; }
+    #dvdcat { width: 180px; height: 180px; }
+    #tooltip { max-width: calc(100vw - 24px); min-width: 0; }
+  }
 </style>
 </head>
 <body>
@@ -284,9 +309,11 @@
     <section id="scores">
       <h2>Leaderboard</h2>
       <p class="section-sub">percent correct, lowest to highest</p>
-      <div class="chart" id="chart"></div>
-      <div class="labels" id="labels"></div>
-      <div id="agi" style="margin-top: 30px;">
+      <div class="chart-scroll">
+        <div class="chart" id="chart"></div>
+        <div class="labels" id="labels"></div>
+      </div>
+      <div id="agi">
         <span class="agi-dot"></span>
         <span class="agi-label">AGI Detector</span>
         <span class="agi-msg" id="agi-msg">…</span>
@@ -404,26 +431,78 @@
 <script>
   (function () {
     const cat = document.getElementById('dvdcat');
-    const SIZE = 320;
-    let x = Math.random() * (window.innerWidth - SIZE);
-    let y = Math.random() * (window.innerHeight - SIZE);
-    let vx = 1.2, vy = 1.0;
-    if (Math.random() < 0.5) vx = -vx;
-    if (Math.random() < 0.5) vy = -vy;
+    const img = cat.querySelector('img');
+    const TARGET = window.innerWidth < 640 ? 160 : 260;
 
-    function frame() {
-      const w = window.innerWidth - SIZE;
-      const h = window.innerHeight - SIZE;
-      if (x <= 0) { x = 0; vx = Math.abs(vx); }
-      if (x >= w) { x = w; vx = -Math.abs(vx); }
-      if (y <= 0) { y = 0; vy = Math.abs(vy); }
-      if (y >= h) { y = h; vy = -Math.abs(vy); }
-      cat.style.transform = `translate(${x}px, ${y}px)`;
-      x += vx;
-      y += vy;
+    function animate(dispW, dispH) {
+      let x = Math.random() * Math.max(0, window.innerWidth - dispW);
+      let y = Math.random() * Math.max(0, window.innerHeight - dispH);
+      let vx = 1.2, vy = 1.0;
+      if (Math.random() < 0.5) vx = -vx;
+      if (Math.random() < 0.5) vy = -vy;
+
+      function frame() {
+        const w = Math.max(0, window.innerWidth - dispW);
+        const h = Math.max(0, window.innerHeight - dispH);
+        if (x <= 0) { x = 0; vx = Math.abs(vx); }
+        if (x >= w) { x = w; vx = -Math.abs(vx); }
+        if (y <= 0) { y = 0; vy = Math.abs(vy); }
+        if (y >= h) { y = h; vy = -Math.abs(vy); }
+        cat.style.transform = `translate(${x}px, ${y}px)`;
+        x += vx;
+        y += vy;
+        requestAnimationFrame(frame);
+      }
       requestAnimationFrame(frame);
     }
-    requestAnimationFrame(frame);
+
+    // fallback: animate the existing <img> using its rendered size
+    function fallback() {
+      const r = cat.getBoundingClientRect();
+      animate(r.width, r.height);
+    }
+
+    // crop image to its visible (non-transparent) content so the sprite
+    // truly touches the walls, then animate using the real rendered size.
+    const probe = new Image();
+    probe.onload = function () {
+      const cw = probe.naturalWidth, ch = probe.naturalHeight;
+      const c = document.createElement('canvas');
+      c.width = cw; c.height = ch;
+      const ctx = c.getContext('2d');
+      ctx.drawImage(probe, 0, 0);
+      let data;
+      try { data = ctx.getImageData(0, 0, cw, ch).data; } catch (e) { fallback(); return; }
+      let minX = cw, minY = ch, maxX = 0, maxY = 0, found = false;
+      for (let py = 0; py < ch; py++) {
+        for (let px = 0; px < cw; px++) {
+          if (data[(py * cw + px) * 4 + 3] > 10) {
+            found = true;
+            if (px < minX) minX = px;
+            if (px > maxX) maxX = px;
+            if (py < minY) minY = py;
+            if (py > maxY) maxY = py;
+          }
+        }
+      }
+      if (!found) { fallback(); return; }
+      const contentW = maxX - minX + 1;
+      const contentH = maxY - minY + 1;
+      const cropped = document.createElement('canvas');
+      cropped.width = contentW;
+      cropped.height = contentH;
+      cropped.getContext('2d').drawImage(probe, minX, minY, contentW, contentH, 0, 0, contentW, contentH);
+      cat.innerHTML = '';
+      cat.appendChild(cropped);
+      const scale = TARGET / Math.max(contentW, contentH);
+      const dispW = contentW * scale;
+      const dispH = contentH * scale;
+      cat.style.width = dispW + 'px';
+      cat.style.height = dispH + 'px';
+      animate(dispW, dispH);
+    };
+    probe.onerror = fallback;
+    probe.src = img.src;
   })();
 </script>
 </body>
