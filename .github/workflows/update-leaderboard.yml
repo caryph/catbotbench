@@ -1,0 +1,39 @@
+name: update-leaderboard
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - benchmark/eval/**
+      - benchmark/questions.json
+      - config.yml
+      - gen_data.py
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Regenerate data.json + leaderboard.svg
+        run: python3 gen_data.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json assets/leaderboard.svg
+          if git diff --cached --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore: regenerate leaderboard [skip ci]"
+            git push
+          fi

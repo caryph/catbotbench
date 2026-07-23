@@ -308,7 +308,7 @@
   <main class="wrap">
     <section id="scores">
       <h2>Leaderboard</h2>
-      <p class="section-sub">percent correct, lowest to highest</p>
+      <p class="section-sub">percent correct, highest to lowest</p>
       <div class="chart-scroll">
         <div class="chart" id="chart"></div>
         <div class="labels" id="labels"></div>
@@ -394,7 +394,7 @@
 
   function render(data) {
     const questions = data.questions;
-    data.models.forEach(m => {
+    [...data.models].reverse().forEach(m => {
       const pct = (m.score / m.total) * 100;
       const parts = m.model.split('/');
       const name = parts.slice(1).join('/') || m.model;

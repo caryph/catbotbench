@@ -8,6 +8,8 @@ Okay no this is just a small (~100 lines) extremely specific evaluator to test w
 
 Interestingly, the huge ones do! It's heavily outdated, so I'm curious to see more models catch up over the next year or two, and be able to answer even more complex queries.
 
+![catbotbench leaderboard](assets/leaderboard.svg)
+
 ## Usage
 
 1. Download the repository:
