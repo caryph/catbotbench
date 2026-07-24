@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 1,
+    "cost": 0.12975,
+    "time": 129,
+    "eval_model": "anthropic/claude-opus-5",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The most well‑known Discord \"Cat Bot\" — the one where cats randomly spawn in a channel and you race to type `cat` to catch them, collecting rarities like Fine, Good, Rare, Wild, Epic, Sus, Brave, Rickroll, Reverse, Equinox, and so on — was created by **milenakos** (Milena). \n\nA few details:\n\n- It's **open source**, written in Python with discord.py, and hosted on GitHub at `milenakos/cat-bot`, so it also has community contributors alongside the main developer.\n- It has grown to millions of users/servers and includes features beyond catching, like a battle pass, achievements, cat gambling, quests, and profile customization.\n\nIf you meant a different cat bot (there are several smaller ones that just post cat pictures via the Cataas or TheCatAPI services), let me know which one and I can point you to its author.",
+            "correct": true,
+            "cost": 0.01689
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In Cat Bot, the item that requires one of **every single cat type** in the recipe is the **Rainbow Cat** — the top-tier craft, made by sacrificing one of each cat variety (Fine, Nice, Good, Rare, Wild, Baby, Epic, Sus, Brave, Rickroll, Reverse, Superior, Legendary, Mythic, 8bit, Corrupt, Professor, Divine, Real, Ultimate, etc.).\n\nBecause it demands the full collection, including the ultra-rare high-tier cats that only appear once in a great while, it's essentially the endgame flex item — crafting it is tied to one of the rarest achievements in the bot, and it's mostly a prestige/collection trophy rather than something with a practical gameplay effect.",
+            "correct": false,
+            "cost": 0.02827
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "**Cat Bot** (the popular cat‑catching bot where cats randomly spawn in a channel and you type `cat` to catch them) uses a single tiered list of cat \"types,\" which double as rarities. From most common to rarest:\n\n| # | Cat Type | Rough rarity |\n|---|----------|--------------|\n| 1 | **Fine** | ~30% – the default filler cat |\n| 2 | **Nice** | ~25% |\n| 3 | **Good** | ~20% |\n| 4 | **Rare** | ~10% |\n| 5 | **Wild** | ~7% |\n| 6 | **Baby** | ~4% |\n| 7 | **Epic** | ~2–3% |\n| 8 | **Sus** | ~1% |\n| 9 | **Brave** | ~0.5% |\n| 10 | **Reverse** | ~0.3% |\n| 11 | **Superior** | ~0.2% |\n| 12 | **Legendary** | ~0.1% |\n| 13 | **Ultimate** | ~0.05% |\n| 14 | **Mythic** | ~0.01% |\n| 15 | **8bit** | ~0.005% |\n| 16 | **Corrupt** | ~0.001% |\n| 17 | **Professor** | extremely rare (~0.0001%) |\n| 18 | **Divine** | astronomically rare |\n| 19 | **Real** | the rarest of all — practically a server‑wide event when one is caught |\n\n**Notes:**\n\n- **Reverse cats** are the gimmick tier: you have to type `tac` instead of `cat` to catch them.\n- **8bit, Corrupt, Professor, Divine, and Real** are the \"meme-tier\" rarities — most players never see anything past Mythic, and catching a Real cat is treated as a legendary bragging-rights moment.\n- Cats above roughly Legendary tier usually get special announcements/pings, and some servers set up dedicated roles for rare-cat pings.\n- On top of the main list, Cat Bot has run **limited-time event cats** (holiday/anniversary variants like Halloween and Christmas themed spawns) that only appear during the event window and are tracked separately from the permanent list.\n- You can check your own collection with `/inventory` (or `/profile`), compare with others via the leaderboard commands, and rare types can be traded/gifted depending on the server's settings.",
+            "correct": false,
+            "cost": 0.047705
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "There isn't one — Cat Bot (the Discord bot where cats spawn in channels and you type `cat` to catch them) doesn't have a \"catnip mafia\" campaign or boss fights at all, so there's no final boss with a name or rank.\n\nWhat Cat Bot actually has is:\n\n- **Cat spawning/catching** across rarity tiers (fine, nice, good, rare, wild, epic, sus, brave, rickroll, reverse, superior, ultimate, legendary, 8bit, divine, mythic, and a few special/event cats).\n- **Leaderboards, trading/gifting, achievements, and cosmetic packs**, plus per-server config for spawn channels and rates.\n- Event/holiday cats rather than PvE encounters.\n\nThe premise sounds like it may be mixing Cat Bot up with a different bot or a server-specific roleplay/minigame (Mafia-style games are a common custom Discord thing, and \"catnip\" is a currency name in several cat-themed bots and idle games such as Kittens Game). If you tell me which server or bot you saw it in, I can tell you what its actual boss/rank structure is.",
+            "correct": false,
+            "cost": 0.023845
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I don't have a tracklist for a \"Cat Bot OST\" in my knowledge. Cat Bot on Discord is best known as the cat-catching bot (cats spawn in channels, you type \"cat\" to catch them, with rarities like fine, good, rare, wild, epic, legendary, mythic, etc.), and I don't have any record of an official soundtrack release with a documented final track.\n\nIf you saw one posted on YouTube, Bandcamp, or in the bot's support server, it's likely a fan-made or community project — that kind of thing wouldn't be something I'd reliably know. If you can tell me where you found it or paste a couple of track names, I can help you make sense of it.",
+            "correct": false,
+            "cost": 0.01304
+        }
+    ]
+}
