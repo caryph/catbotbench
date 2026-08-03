@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.181092,
+    "time": 841,
+    "eval_model": "qwen/qwen3.8-max",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Discord Cat Bot was made by **TheCatAPI** — the team behind the Cat API.",
+            "correct": false,
+            "cost": 0.033368
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "Using one of every cat type in Discord Cat Bot, you can craft the **Cat Crown**.",
+            "correct": false,
+            "cost": 0.039208
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "The main cat types/rarities in Discord Cat Bot are:\n\n1. Common  \n2. Uncommon  \n3. Rare  \n4. Epic  \n5. Legendary  \n6. Mythic  \n7. Divine  \n8. Celestial  \n\nLimited, event, secret, or special variant cats are usually separate from the main rarity ladder.",
+            "correct": false,
+            "cost": 0.027034
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss is **Don Catleone**, and his rank is **Godfather**.",
+            "correct": false,
+            "cost": 0.052292
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song on the Discord Cat Bot OST is **“Goodbye.”**",
+            "correct": false,
+            "cost": 0.02919
+        }
+    ]
+}

@@ -43,8 +43,11 @@ python3 benchmark/run.py -m <model>
 | `-v` | `--validation-model`  | Judge model (default: `google/gemma-4-31b-it`) |
 | `-d` | `--debug`             | Will print out each response (disabled by default) |
 
-5. Configure shown models, provider logos and colors in `config.yml`
-6. Run your own WebUI:
+### Website
+
+1. Configure shown models, provider logos and colors in `config.yml`
+
+2. Host with github pages or run site locally:
 
 ```bash
 python3 -m http.server 8000
