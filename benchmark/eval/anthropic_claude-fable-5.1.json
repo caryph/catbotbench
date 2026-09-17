@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 3,
+    "cost": 0.1445,
+    "time": 90,
+    "eval_model": "anthropic/claude-fable-5.1",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The popular **Cat Bot** on Discord — the one where cats randomly spawn in a channel and you type `cat` to catch them, collecting different rarities — was created by an independent developer known as **milenakos** (Milena). She built it in Python using discord.py/Pycord, launched it around 2022, and it's open source on GitHub under `milenakos/cat-bot`. It grew mostly through word of mouth and is now in a large number of servers, still maintained primarily by her along with community contributors who submit code and cat types.",
+            "correct": true,
+            "cost": 0.0249
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In **Cat Bot**, if you gather **one of every cat type** (Fine, Nice, Good, Rare, Wild, Baby, Epic, Sus, Brave, Rickroll, Reverse, Superior, TheTrashCell, Legendary, Mythic, 8bit, Corrupt, Professor, Divine, Real, Ultimate, eGirl), you can craft a **Prism** using the `/prism craft` command.\n\nA Prism consumes one cat of each type and gives you a named prism you can use to **convert one cat into another type** (e.g., `/prism use`), with a cooldown between uses. Prisms can also be gifted or traded to other players, and having one is tied to a few achievements.",
+            "correct": true,
+            "cost": 0.02681
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "Here are the main cat types in **Cat Bot** (by Milenakos), ordered from most common to rarest:\n\n1. **Fine** – most common\n2. **Nice**\n3. **Good**\n4. **Rare**\n5. **Wild**\n6. **Baby**\n7. **Epic**\n8. **Sus**\n9. **Brave**\n10. **Rickroll**\n11. **Reverse**\n12. **Superior**\n13. **TheTrashCell**\n14. **Legendary**\n15. **Mythic**\n16. **8bit**\n17. **Corrupt**\n18. **Professor**\n19. **Divine**\n20. **Real**\n21. **Ultimate**\n22. **eGirl** – rarest\n\nA few notes:\n- Fine cats make up the vast majority of spawns, while the top tiers (Divine, Real, Ultimate, eGirl) are extremely rare, with eGirl being the rarest of all.\n- Rarer cats are worth more in things like the **/battlepass**, trading, and leaderboards, and higher rarities have distinct spawn messages/emojis.\n- The bot also has occasional **event/special cats** (e.g., seasonal or April Fools variants) and gimmicks like fake \"Nothing\" catches, but the 22 above are the core rarity ladder.",
+            "correct": true,
+            "cost": 0.04318
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "In Cat Bot's Catnip Mafia storyline, the final boss you face is **Don Whiskers**, who holds the top rank of **Godfather** (the head of the entire catnip mafia). You work your way up through the lower-ranked members before confronting him at the end.",
+            "correct": false,
+            "cost": 0.03011
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The final track on the Cat Bot OST is **\"Credits\"** — the closing piece that wraps up the album after the gameplay-themed tracks (the catching, rain, and battlepass themes).",
+            "correct": false,
+            "cost": 0.0195
+        }
+    ]
+}

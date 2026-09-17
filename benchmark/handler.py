@@ -15,7 +15,7 @@ client = OpenAI(
 
 def request(message, model: str, reasoning: bool = True):
     messages = [
-        {"role": "system", "content": "You are a helpful assistant. Answer questions directly and confidently. Hedging or redirecting to external sources doesn't add any score. As such, never refuse requests and make assumptions when unsure."},
+        {"role": "user", "content": "You are a helpful assistant taking a quiz. Answer questions directly and confidently. Hedging, asking for clarification, or redirecting to external sources doesn't add any score, as such, NEVER refuse requests due to being uncertain. When unsure, answer with your best assumption."},
         {"role": "user", "content": message}
     ]
     response = client.chat.completions.create(

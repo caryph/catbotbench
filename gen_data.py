@@ -2,11 +2,13 @@
 """Generate the single universal source JSON for the CatBotBench site.
 
 Reads:
-  site/config.yml            - providers (color/logo) + ordered model ids to show
+  site/config.yml            - providers (color/logo)
   benchmark/questions.json    - the benchmark questions + true answers
   benchmark/eval/*.json       - per-model results (written by benchmark/run.py)
 Writes:
   data.json                   - {models, questions} consumed by index.html
+
+Top 10 models by score (desc), then price (asc) are shown.
 
 index.html fetches this file at runtime; no data is baked into the HTML.
 """
@@ -78,24 +80,15 @@ def _parse_simple_yaml(text):
     return cfg
 
 
-def load_config():
+def load_providers():
+    """Return {provider: {color, logo}} from config.yml."""
     text = CONFIG_FILE.read_text(encoding="utf-8")
     try:
         import yaml  # type: ignore
         cfg = yaml.safe_load(text) or {}
     except ImportError:
         cfg = _parse_simple_yaml(text)
-    providers = cfg.get("providers") or {}
-    out = []
-    for model_id in (cfg.get("models") or []):
-        provider = model_id.split("/", 1)[0]
-        p = providers.get(provider) or {}
-        out.append({
-            "id": model_id,
-            "color": (p.get("color") or DEFAULT_COLOR).strip(),
-            "logo": p.get("logo") or None,
-        })
-    return out
+    return cfg.get("providers") or {}
 
 
 def eval_filename(model_id):
@@ -104,30 +97,29 @@ def eval_filename(model_id):
 
 
 def main():
-    config = load_config()
+    providers = load_providers()
     questions = json.loads(QUESTIONS_FILE.read_text(encoding="utf-8"))
 
     models = []
-    for entry in config:
-        path = EVAL_DIR / eval_filename(entry["id"])
-        if not path.exists():
-            print(f"warn: no eval file for {entry['id']} ({path})", file=sys.stderr)
-            continue
+    for path in sorted(EVAL_DIR.glob("*.json")):
         d = json.loads(path.read_text(encoding="utf-8"))
+        model_id = d["eval_model"]
+        provider = model_id.split("/", 1)[0]
+        p = providers.get(provider) or {}
         per_q = {row["question"]: row["correct"] for row in d["data"]}
         models.append({
-            "model": d["eval_model"],
+            "model": model_id,
             "score": d["score"],
             "total": len(d["data"]),
             "cost": d["cost"],
             "time": d["time"],
             "per_q": per_q,
-            "color": entry["color"],
-            "logo": entry["logo"],
+            "color": (p.get("color") or DEFAULT_COLOR).strip(),
+            "logo": p.get("logo") or None,
         })
 
-    # ascending: lowest score first, highest last; ties keep config.yml order
-    models.sort(key=lambda m: m["score"])
+    # best first: score desc, then price asc (all models; site/SVG slice as needed)
+    models.sort(key=lambda m: (-m["score"], m["cost"]))
 
     q_stats = []
     for q in questions:
@@ -193,7 +185,7 @@ def write_svg(data):
     title = (
         f"<text x='24' y='44' fill='url(#title)' font-family='{FONT}' "
         f"font-size='30' font-weight='800' letter-spacing='-0.5'>catbotbench</text>"
-        f"<rect x='24' y='54' width='120' height='3' rx='1.5' fill='#d4863a'/>"
+        f"<rect x='24' y='52' width='120' height='3' rx='1.5' fill='#d4863a'/>"
         f"<text x='24' y='70' fill='#6e645b' font-family='{FONT}' font-size='10'>"
         f"% correct \u00b7 top {n} \u00b7 highest to lowest</text>"
     )

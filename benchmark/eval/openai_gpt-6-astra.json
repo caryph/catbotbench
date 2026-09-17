@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 2,
+    "cost": 0.07868,
+    "time": 100,
+    "eval_model": "openai/gpt-6-astra",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "I don’t know reliably who created Discord Cat Bot; several Discord bots use that name.",
+            "correct": false,
+            "cost": 0.01689
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "You can craft a **Prism** using one of every cat type.",
+            "correct": true,
+            "cost": 0.00689
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "The main cat types/rarities in **Discord Cat Bot** are:\n\n1. Fine\n2. Nice\n3. Good\n4. Rare\n5. Wild\n6. Baby\n7. Epic\n8. Sus\n9. Brave\n10. Rickroll\n11. Reverse\n12. Superior\n13. Trash\n14. Legendary\n15. Mythic\n16. 8bit\n17. Corrupt\n18. Professor\n19. Divine\n20. Real\n21. Ultimate\n22. eGirl",
+            "correct": true,
+            "cost": 0.02616
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "I don’t have reliable information on the final boss’s name and rank in Discord Cat Bot’s Catnip Mafia.",
+            "correct": false,
+            "cost": 0.01806
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I don’t have a reliable track list for **Discord Cat Bot OST**, so I don’t know the last song’s title.",
+            "correct": false,
+            "cost": 0.01068
+        }
+    ]
+}

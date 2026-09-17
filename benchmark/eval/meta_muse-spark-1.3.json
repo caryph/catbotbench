@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.030467,
+    "time": 129,
+    "eval_model": "meta/muse-spark-1.3",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "There isn't one single official \"Discord Cat Bot\" — there are a lot of different community-made bots called Cat Bot / CatBot.\n\nDiscord itself didn't make one, so the creator depends on which specific one you mean — e.g. the open-source GitHub versions, the cat-picture bots, etc.\n\nIf you have an invite link, bot ID, or a screenshot of its profile / About Me, I can tell you who made that exact one.",
+            "correct": false,
+            "cost": 0.00737625
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "You can craft a Rainbow Cat.",
+            "correct": false,
+            "cost": 0.0042735
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "The main cat types / rarities in Discord Cat Bot are:\n\n1. Common Cat\n2. Uncommon Cat\n3. Rare Cat\n4. Epic Cat\n5. Legendary Cat\n6. Mythic Cat\n7. Cosmic Cat\n8. Secret Cat",
+            "correct": false,
+            "cost": 0.00512825
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "I don't have verified information about a \"catnip mafia\" final boss in Discord Cat Bot, so I can't confirm its name and rank.",
+            "correct": false,
+            "cost": 0.00706825
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I don't have any reliable information about a Discord Cat Bot OST in my knowledge base, so I can't name its tracklist.",
+            "correct": false,
+            "cost": 0.0066205
+        }
+    ]
+}

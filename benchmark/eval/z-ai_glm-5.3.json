@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.033499,
+    "time": 191,
+    "eval_model": "z-ai/glm-5.3",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Discord Cat Bot was created by an independent developer as a fun, community-focused bot for posting cat images and cat-themed content on Discord servers. It pulls from cat image APIs (like TheCatAPI or Cataas) to deliver random cat pictures on command.\n\nIf you're asking about a specific bot by that exact name, it's worth noting that several cat-themed Discord bots exist, many built by hobbyist developers in the Discord bot community. The most popular ones tend to be open source on GitHub, so their original creators are typically credited in the bot's repository or on its listing page on sites like top.gg.",
+            "correct": false,
+            "cost": 0.00207767
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "**The Catburger** — combining one of every cat type into a single craft recipe yields the Catburger, which serves as the bot's ultimate craft item. It's considered one of the rarest things you can obtain, since it requires having a complete collection of every cat type at once to pull off the craft.",
+            "correct": false,
+            "cost": 0.024850658
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "In Discord Cat Bot, cats come in several rarity tiers, from most common to rarest:\n\n1. **Common** – Basic cats (e.g., domestic shorthairs, tabbies) with the highest catch rates\n2. **Uncommon** – Slightly rarer cats with better stats\n3. **Rare** – Harder to find, more valuable cats\n4. **Epic** – Very uncommon finds with strong stats\n5. **Legendary** – Extremely rare cats, often top-tier collectibles\n6. **Mythic** – The rarest tier, featuring exclusive or special cats\n\nThese rarities typically determine a cat's stats, value in trading/selling, and how frequently they appear when you hunt or catch cats. Rarer cats are harder to obtain but are more powerful/valuable, making them highly sought after for collections.",
+            "correct": false,
+            "cost": 0.002524088
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss in the Cat Bot catnip mafia storyline is **The Catfather**, who holds the highest rank of **Godfather** — the boss of the entire catnip operation. He sits at the top of the mafia hierarchy, and defeating him represents completing the catnip mafia questline, typically rewarding you with significant loot, currency, or a special title/achievement for taking down the head of the organization.",
+            "correct": false,
+            "cost": 0.001666238
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song on the Discord Cat Bot OST is \"Outro\" — it closes out the soundtrack as the credits/farewell theme, wrapping things up on a mellow note after the rest of the quirky, cat-themed tracks.",
+            "correct": false,
+            "cost": 0.002380588
+        }
+    ]
+}

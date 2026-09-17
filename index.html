@@ -109,8 +109,9 @@
   .chart {
     display: flex;
     align-items: flex-end;
-    gap: 10px;
+    gap: 16px;
     flex: none;
+    width: max-content;
     min-width: 100%;
     height: 320px;
     padding: 24px 4px 0;
@@ -120,8 +121,8 @@
     background-clip: content-box;
   }
   .col {
-    flex: 1 1 0;
-    min-width: 56px;
+    flex: 0 0 64px;
+    width: 64px;
     height: 100%;
     display: flex;
     align-items: flex-end;
@@ -150,14 +151,15 @@
   }
   .labels {
     display: flex;
-    gap: 10px;
+    gap: 16px;
+    width: max-content;
     min-width: 100%;
     padding: 10px 4px 0;
     overflow: visible;
   }
   .label-block {
-    flex: 1 1 0;
-    min-width: 56px;
+    flex: 0 0 64px;
+    width: 64px;
     text-align: center;
     overflow: visible;
   }
@@ -274,7 +276,7 @@
     .hero p.lead { font-size: 1rem; }
     .hero .links { font-size: 0.72rem; }
     .chart { height: 220px; gap: 6px; padding-top: 20px; }
-    .col, .label-block { min-width: 44px; }
+    .col, .label-block { flex-basis: 44px; width: 44px; }
     .labels { gap: 6px; }
     .model-name { font-size: 0.62rem; }
     .score-num { font-size: 0.82rem; top: -22px; }
@@ -394,7 +396,8 @@
 
   function render(data) {
     const questions = data.questions;
-    [...data.models].reverse().forEach(m => {
+    // data.json is already best-first (score desc, price asc); render as-is
+    data.models.forEach(m => {
       const pct = (m.score / m.total) * 100;
       const parts = m.model.split('/');
       const name = parts.slice(1).join('/') || m.model;
