@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.002278,
+    "time": 63,
+    "eval_model": "xiaomi/mimo-v2.6-pro",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "**Cat Bot** was created by a developer known as **Softwarez** (also referred to as \"softwares\"). It's a popular Discord bot known for its cat-collecting/gacha-style game where users can collect, breed, and trade virtual cats.",
+            "correct": false,
+            "cost": 0.000534615
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In Discord Cat Bot, you can craft a **Badge** by combining one of every cat type (one from each rarity). This Badge is a special reward item obtained through crafting with a complete set of cat types.",
+            "correct": false,
+            "cost": 0.000746895
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "# Discord Cat Bot – Cat Rarities\n\nThe main rarity tiers in Discord **Cat Bot** (the cat-collecting bot) are:\n\n1. **Common**\n2. **Uncommon**\n3. **Rare**\n4. **Epic**\n5. **Legendary**\n6. **Mythical**\n\nAdditionally, there are special/event-exclusive categories such as:\n\n- **Exotic**\n- **Unusual**\n- **Special** (for limited/event cats)\n\nEach rarity tier increases the difficulty of obtaining the cat and typically reflects its value in trades and collections.",
+            "correct": false,
+            "cost": 0.00040629
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss of the **Catnip Mafia** quest in Discord Cat Bot is **Don Pawleone** (a cat-themed play on Don Corleone from *The Godfather*), and he holds the rank of **5** (the highest rank in the quest line).",
+            "correct": false,
+            "cost": 0.000371925
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "**Nine Lives**",
+            "correct": false,
+            "cost": 0.00021837
+        }
+    ]
+}
