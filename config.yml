@@ -35,3 +35,6 @@ providers:
   x-ai:
     logo: "xai.png"
     color: "#000000"
+  xiaomi:
+    logo: "xiaomi.png"
+    color: "#FF6900"
