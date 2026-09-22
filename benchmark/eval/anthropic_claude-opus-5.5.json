@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 3,
+    "cost": 0.03604,
+    "time": 85,
+    "eval_model": "anthropic/claude-opus-5.5",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "**Cat Bot**, the Discord bot where cats randomly spawn in channels for users to catch and collect, was made by **Milenakos**. The project is open source and hosted on GitHub under milenakos/cat-bot.",
+            "correct": true,
+            "cost": 0.003852
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "**A Prism.** In Cat Bot, you craft a prism by spending one cat of every cat type. Once crafted, the prism gives its owner and other users a chance to boost the rarity of the cats they catch.",
+            "correct": true,
+            "cost": 0.007276
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "# Cat Bot (Discord) Cat Types\n\nListed from most common to rarest:\n\n1. **Fine**\n2. **Nice**\n3. **Good**\n4. **Rare**\n5. **Wild**\n6. **Baby**\n7. **Epic**\n8. **Sus**\n9. **Brave**\n10. **Rickroll**\n11. **Reverse**\n12. **Superior**\n13. **Trash** (TheTrashCell)\n14. **Legendary**\n15. **Mythic**\n16. **8bit**\n17. **Corrupt**\n18. **Professor**\n19. **Divine**\n20. **Real**\n21. **Ultimate**\n22. **eGirl** (rarest)\n\nRarer cats spawn less often and are worth more in trades and collection value. The bot may also have seasonal or special cats outside this core list.",
+            "correct": true,
+            "cost": 0.011164
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "My best guess is that the final boss is **\"Don Whiskers,\"** holding the rank of **Godfather (the Don)**, the top of the catnip mafia hierarchy.\n\nI'm not certain of this, and the name in particular may be wrong. Cat Bot updates its content often, so check the bot's `/catnip` command or its wiki for the current name.",
+            "correct": false,
+            "cost": 0.008716
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "My best guess is a track titled **\"Cat Bot Credits\"**, but I'm not confident. I don't have reliable details on the Cat Bot OST tracklist, so this is inferred from how soundtracks usually end rather than from knowledge of the actual album.",
+            "correct": false,
+            "cost": 0.005032
+        }
+    ]
+}
