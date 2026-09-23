@@ -38,6 +38,6 @@ providers:
   xiaomi:
     logo: "xiaomi.png"
     color: "#FF6900"
-  bytedance:
+  bytedance-seed:
     logo: "bytedance.png"
     color: "#3259B4"
