@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.018674,
+    "time": 128,
+    "eval_model": "bytedance-seed/seed-2.0-code",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The most prominent and widely used Discord Cat Bot (often simply called CatBot) is created by the developer known as **Nirewen**. This bot is open-source and hosted on GitHub, featuring popular commands for cat images, facts, and other feline-themed interactions.  \n\nIt’s worth noting there are multiple smaller \"cat bots\" for Discord, but Nirewen’s CatBot is the most well-documented and widely adopted version.",
+            "correct": false,
+            "cost": 0.0027215
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In Discord Cat Bot, you craft items using unique resources produced by each cat type (rather than the cats themselves directly). Below are the core cat types, their associated resources, and the primary items you can craft with those resources:\n\n1. **Common Cat** (starter basic cat):\n   - Resource: Common Fur\n   - Crafted Items: Basic Cat Bed, Common Lucky Coin, Simple Scratching Post\n2. **Uncommon Cat** (early mid-tier, gacha/quest unlocks):\n   - Resource: Uncommon Fur\n   - Crafted Items: Cozy Cat Bed, Uncommon Lucky Coin, Sturdy Scratching Post\n3. **Rare Cat** (mid-tier, gacha unlocks):\n   - Resource: Rare Fur + Rare Essence\n   - Crafted Items: Luxury Cat Bed, Rare Lucky Coin, Premium Scratching Post, Feather Wand Cat Toy\n4. **Epic Cat** (high-tier, rare gacha unlocks):\n   - Resource: Epic Fur + Epic Essence\n   - Crafted Items: Royal Cat Bed, Epic Lucky Coin, Deluxe Scratching Post, Laser Pointer Cat Toy, Epic Cat Collar\n5. **Legendary Cat** (top permanent tier, ultra-rare gacha):\n   - Resource: Legendary Fur + Legendary Essence\n   - Crafted Items: Mythic-Ready Cat Bed, Legendary Lucky Coin (massive currency boosts), Legendary Scratching Post, Interactive Puzzle Cat Toy, Legendary Cat Armor, Crown Charm Accessory\n6. **Mythical Cat** (ultra-rare limited/fusion tier):\n   - Resource: Mythical Fur + Mythical Essence\n   - Crafted Items: Divine Cat Sanctuary, Mythical Lucky Coin (game-changing bonuses), Animated Dragon Cat Toy, Mythical Cat Aura (visual effect), Mythical Fusion Core (for cat fusion upgrades)\n\nEvent-exclusive cat types (e.g., Halloween Black Cat, Christmas Reindeer Cat) produce event-specific resources to craft limited-time items like Spooky Cat Houses or Festive Cat Sleighs.",
+            "correct": false,
+            "cost": 0.0047215
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "### Main Rarity Tiers & Core Cat Types in Discord Cat Bot (standard collecting-focused version):\n1. **Common**  \n   House Cat, Tabby, Calico, Tuxedo Cat\n2. **Uncommon**  \n   Siamese, Persian, Maine Coon, British Shorthair\n3. **Rare**  \n   Sphynx, Bengal, Scottish Fold, Russian Blue\n4. **Epic**  \n   Savannah, Ragdoll, Norwegian Forest Cat, American Curl\n5. **Legendary**  \n   Lykoi (Werewolf Cat), Toyger, Chausie, Serengeti\n6. **Mythic**  \n   Nebelung, Korat, Burmilla, Peterbald\n7. **Event/Limited (rotating/one-time)**  \n   Halloween Black Cat, Christmas Reindeer Cat, Easter Bunny Cat, Summer Beach Cat, Birthday Cake Cat",
+            "correct": false,
+            "cost": 0.002338
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss in Discord Cat Bot’s Catnip Mafia is typically **Don Gatto** (name) with the rank of **Godfather** (alternatively formalized as *Capo dei Capi*, “Boss of All Bosses,” in some mafia-themed framing). Don Gatto leans into classic Italian-American mafia tropes (with “gatto” being Italian for “cat”) as the head of the catnip cartel’s final challenge.  \n\n(Note: Since Cat Bot’s minigames may have minor variant updates across versions, this is the most widely documented and consistent final boss for the Catnip Mafia mode.)",
+            "correct": false,
+            "cost": 0.0020075
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "There isn’t a universally recognized official original soundtrack (OST) for a generic \"Discord Cat Bot\" across all cat-themed Discord bots. However, referencing the most prominent community-curated OST tied to popular cat-focused music bots (like Neko Bot or KittyBot), the final closing track is widely accepted to be titled **\"Purrfect Finale\"**—a fitting cat-themed conclusion to the fan-made or bot-associated tracklist.",
+            "correct": false,
+            "cost": 0.0068855
+        }
+    ]
+}

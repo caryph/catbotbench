@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.05717,
+    "time": 451,
+    "eval_model": "bytedance-seed/seed-2-1-turbo",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "The most well-known and widely used Discord Cat Bot (a cat-themed bot that shares cat photos, facts, and fun commands, present in over 1.9 million Discord servers) was created by an independent developer who goes by the online alias \"Night\". There are hundreds of smaller cat-themed bots on Discord made by other creators, but this is the bot most commonly referred to as \"Discord Cat Bot\".",
+            "correct": false,
+            "cost": 0.009337
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "For the official popular Discord Cat Bot (catbot.gg), each cat breed can be used as a crafting material to create a unique, breed-themed item. The full list of cat types and their corresponding crafted items is below, sorted by rarity:\n### Common Breeds\n- Tabby Cat: Striped Yarn Mouse\n- Black Cat: Lucky Charm\n- White Cat: Fluffy Wool Blanket\n- Orange Cat: Spicy Tuna Treat\n- Gray Cat: Stone Cat Statue\n- Calico Cat: Patchwork Quilt\n- Tuxedo Cat: Silk Bow Tie\n### Uncommon Breeds\n- Siamese Cat: Exotic Silver Collar\n- Persian Cat: Luxurious Fur Pillow\n- Maine Coon: Giant Scratching Post\n- Sphynx Cat: Knit Warm Sweater\n- Ragdoll Cat: Plush Cat Bed\n### Rare Breeds\n- Bengal Cat: Spotted Print Rug\n- Savannah Cat: Carved Wooden Spear\n- Scottish Fold: Fold-Design Earmuffs\n- Russian Blue: Cobalt Blue Vase\n### Epic Breeds\n- British Shorthair: Ceramic Tea Mug\n- Abyssinian: Iron Hunting Dagger\n- Norwegian Forest Cat: Woodcutter's Axe\n### Legendary Breeds\n- Bombay Cat: Black Wax Candle\n- Turkish Angora: Silk Ball Gown\n- Chartreux Cat: Silver Pocket Watch\n### Mythic Breeds\n- Rainbow Cat: Rainbow Cape\n- Shadow Cat: Shadow Dagger\n- Golden Cat: Royal Gold Crown\n### Special/Limited Breeds\n- Cosmic Cat: Cosmic Star Staff\n- God Cat: Divine God Idol",
+            "correct": false,
+            "cost": 0.0287845
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "These are the main cat rarities and core type categories for the widely used official verified Discord Cat Bot (the /cat command bot), ordered from most common to rarest, including limited special types:\n\n---\n### Standard Permanent Rarities (rollable at any time via regular /cat commands)\n1. **Common** (~60% drop rate): Basic domestic cat designs with no special effects. Core types: Tabby, Black Cat, White Cat, Calico, Orange Tabby, Gray Shorthair.\n2. **Uncommon** (~22% drop rate): Unique breed or lightly themed designs with minor visual details. Core types: Tuxedo Cat, Sphynx, Scottish Fold, Munchkin, Siamese.\n3. **Rare** (~10% drop rate): Distinct themed designs with basic visual flair. Core types: Mermaid Cat, Wizard Cat, Pirate Cat, Cowboy Cat, Fairy Cat.\n4. **Epic** (~5% drop rate): Elaborate themed designs with detailed visual effects. Core types: Dragon Cat, Galaxy Cat, Vampire Cat, Werewolf Cat, Neon Cat.\n5. **Legendary** (~2% drop rate): Ultra-detailed, often animated designs with profile display perks. Core types: Golden Cat, Phoenix Cat, Cosmic Cat, Diamond Cat.\n6. **Mythic** (<0.5% drop rate): The rarest permanent rarity, with ultra-elaborate designs, unique bot perks, and hidden codex entries until obtained. Core types: Void Cat, Celestial Cat, Chronos Cat, Aurora Cat.\n\n---\n### Special Non-Standard Cat Types/Rarities (not regularly rollable)\n7. **Event Exclusive**: Limited-time cats only available during seasonal/holiday events (Halloween, Christmas, Valentine's, April Fools, etc.), with event-only drop rates that leave the pool after the event ends. Examples: Santa Cat, Spooky Ghost Cat, Cupid Cat, Easter Bunny Cat.\n8. **Secret Cats**: Hidden unlisted cats that do not appear in the public codex until rolled, often tied to easter egg triggers or ultra-rare random rolls (almost always Mythic-tier rarity).\n9. **Partner/Exclusive Cats**: Cats only obtainable via official promotions, Discord Nitro rewards, bot milestone giveaways, or partner collaborations, with no regular roll method.",
+            "correct": false,
+            "cost": 0.0062805
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss of the Catnip Mafia in Discord Cat Bot is **Don Whiskers**, holding the rank of *Don* — the supreme leader/head of the entire Catnip Mafia syndicate.",
+            "correct": false,
+            "cost": 0.005728
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last track on the official Discord Cat Bot Original Soundtrack is **\"Purrfect Ending (Outro)\"**, the closing theme that plays during bot shutdown/voice channel disconnect sequences and is the final listed track on the bot's official OST release.",
+            "correct": false,
+            "cost": 0.00704
+        }
+    ]
+}
