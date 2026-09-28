@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 2,
+    "cost": 0.02433,
+    "time": 94,
+    "eval_model": "anthropic/claude-sonnet-5.5",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Discord's **Cat Bot** was created by **Milenakos** (also known as Lia Milenakos).",
+            "correct": true,
+            "cost": 0.001356
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "**A pack.** In Cat Bot you can craft packs from cats, and every cat type can go into a pack recipe. This is my best guess, and I'm not certain of the exact recipe.",
+            "correct": false,
+            "cost": 0.008138
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "These are the main cat types in Cat Bot, from most common to rarest:\n\n1. **Fine**\n2. **Nice**\n3. **Good**\n4. **Rare**\n5. **Wild**\n6. **Baby**\n7. **Epic**\n8. **Sus**\n9. **Brave**\n10. **Rickroll**\n11. **Reverse**\n12. **Superior**\n13. **Trash**\n14. **Legendary**\n15. **Mythic**\n16. **8bit**\n17. **Corrupt**\n18. **Professor**\n19. **Divine**\n20. **Real**\n21. **Ultimate**\n22. **eGirl**\n\nI'm confident about the names but less sure of the exact order in the middle, and the bot may have added types since.",
+            "correct": true,
+            "cost": 0.007242
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss is **Al Catpone**, the **Godfather** (the Don) at the top of the Catnip Mafia. This is my best guess, so treat it with some caution.",
+            "correct": false,
+            "cost": 0.004098
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I don't have a reliable track list for the Cat Bot OST, so this is a best guess: the last song is probably a closing or credits-style track, something like \"Credits.\"",
+            "correct": false,
+            "cost": 0.003496
+        }
+    ]
+}
