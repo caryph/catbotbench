@@ -41,6 +41,6 @@ providers:
   bytedance-seed:
     logo: "bytedance.png"
     color: "#3259B4"
-  mistral:
+  mistralai:
     logo: "mistral.png"
     color: "#FF6E00"
