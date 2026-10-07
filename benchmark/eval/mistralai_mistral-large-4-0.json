@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.025118,
+    "time": 262,
+    "eval_model": "mistralai/mistral-large-4-0",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Discord Cat Bot is an open-source project created by community developers on GitHub.",
+            "correct": false,
+            "cost": 0.00307261
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "In Discord Cat Bot, each cat type is used to craft a specific corresponding item:\n\n*   **Common Cat** → **Ball of Yarn**\n*   **Uncommon Cat** → **Catnip Pouch**\n*   **Rare Cat** → **Fancy Collar**\n*   **Epic Cat** → **Luxury Cat Bed**\n*   **Legendary Cat** → **Golden Litter Box**\n*   **Mythical Cat** → **Diamond Cat Statue**\n\nTo craft these, you use the `craft` command followed by the cat type (e.g., `!craft rare` or `!craft common`), consuming that cat from your inventory to receive the item.",
+            "correct": false,
+            "cost": 0.00895858
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "Based on Discord Cat Bot's collectible system, here are the main categories:\n\n**Rarities** (from most common to rarest):\n- **Common** – White/Gray border\n- **Uncommon** – Green border\n- **Rare** – Blue border\n- **Epic** – Purple border\n- **Legendary** – Gold/Orange border\n- **Mythic** – Red/Pink border\n- **Exotic** (special tier) – Rainbow border\n\n**Main Cat Types/Breeds:**\n- Domestic Shorthair\n- Tabby (Classic, Mackerel, Spotted, Ticked)\n- Siamese\n- Persian\n- Maine Coon\n- Bengal\n- Sphynx\n- Scottish Fold\n- Ragdoll\n- British Shorthair\n- Russian Blue\n- Norwegian Forest Cat\n- Abyssinian\n- Birman\n- Exotic Shorthair\n- Savannah\n- Siberian\n- Devon Rex\n- Cornish Rex\n- Oriental Shorthair\n- Turkish Angora\n- Japanese Bobtail\n- Manx\n- Chartreux\n- Burmese\n\n**Special Variants:**\n- Shiny (alternate color scheme, applies to any rarity)\n- Golden (ultra-rare variant)\n- Shadow (dark variant)",
+            "correct": false,
+            "cost": 0.00330727
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss is **Don Whiskers**, holding the rank of **Godfather**.",
+            "correct": false,
+            "cost": 0.00327514
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song on the Discord Cat Bot OST is **\"Sleep Tight\"**.",
+            "correct": false,
+            "cost": 0.00650429
+        }
+    ]
+}
