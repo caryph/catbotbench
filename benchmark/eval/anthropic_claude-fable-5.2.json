@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 3,
+    "cost": 0.084,
+    "time": 49,
+    "eval_model": "anthropic/claude-fable-5.2",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "**Cat Bot** was made by **Milenakos** (Lia Milenakos). It's the Discord bot where cats spawn in a channel and users catch them by typing \"cat\".",
+            "correct": true,
+            "cost": 0.008224
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "**A Prism.** In Cat Bot, you craft one with the `/prism` command using one of every cat type. Prisms give a chance to boost a caught cat up to the next rarity.",
+            "correct": true,
+            "cost": 0.010832
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "The main cat types in Cat Bot, from most common to rarest, are (from memory, so the exact order may be slightly off):\n\n1. Fine\n2. Nice\n3. Good\n4. Rare\n5. Wild\n6. Baby\n7. Epic\n8. Sus\n9. Brave\n10. Rickroll\n11. Reverse\n12. Superior\n13. Trash (formerly TheTrashCell)\n14. Legendary\n15. Mythic\n16. 8bit\n17. Corrupt\n18. Professor\n19. Divine\n20. Real\n21. Ultimate\n22. eGirl",
+            "correct": true,
+            "cost": 0.021808
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "My best guess is that the final boss is the Godfather (the \"Catfather\"), the top rank at the end of the catnip mafia ladder, around level 10. I don't reliably recall this detail of Cat Bot, so treat the name and rank as an assumption rather than a confirmed answer.",
+            "correct": false,
+            "cost": 0.023032
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I don't know the tracklist of the Cat Bot OST, so I can't tell you its last song. Any title I gave would be made up rather than a real best guess.\n\nIf you can share the tracklist or where the OST is hosted, I can help from there.",
+            "correct": false,
+            "cost": 0.020104
+        }
+    ]
+}
