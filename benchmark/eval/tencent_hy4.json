@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.082485,
+    "time": 787,
+    "eval_model": "tencent/hy4",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Faisal Sayed (@faisalsayed10) made Discord Cat Bot.",
+            "correct": false,
+            "cost": 0.0107468105
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "You can craft the **Meowmere** sword.",
+            "correct": false,
+            "cost": 0.0078773315
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "The main Discord Cat Bot rarity ladder is:\n\n**Common, Uncommon, Rare/Super Rare, Epic, Legendary, Mythical/Mythic, Godly, and Special/Event/Limited (Secret) cats.**",
+            "correct": false,
+            "cost": 0.013472068
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss is **Don Catleone, “The Catfather/Pawfather”**, with the rank of **Godfather — the top/S-rank boss** of the Catnip Mafia.",
+            "correct": false,
+            "cost": 0.016428668
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The last song is “MEGALOMEOWNIA,” the Cat Bot/Megalovania finale.",
+            "correct": false,
+            "cost": 0.033959843
+        }
+    ]
+}

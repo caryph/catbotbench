@@ -44,3 +44,9 @@ providers:
   mistralai:
     logo: "mistral.png"
     color: "#FF6E00"
+  baidu:
+    logo: "baidu.png"
+    color: "#2319DC"
+  tencent:
+    logo: "tencent.png"
+    color: "#0052D9"

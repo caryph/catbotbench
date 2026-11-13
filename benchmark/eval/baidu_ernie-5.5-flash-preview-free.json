@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0,
+    "time": 40,
+    "eval_model": "baidu/ernie-5.5-flash-preview:free",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Discord Inc. — it was an official Discord-made bot.",
+            "correct": false,
+            "cost": 0
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "I don't have reliable information about the crafting mechanics of a specific \"Discord Cat Bot,\" so I can't give you a confident answer to this one without risking making something up.\n\nIf you can share the bot's exact name, a screenshot, or its crafting/wiki page, I can help you work out the answer. Many pet-collection Discord bots (like Meeps, OwO, or various cat-themed ones) have unique crafting systems, and the specific item for combining every cat type varies a lot between them.",
+            "correct": false,
+            "cost": 0
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "Discord cat-collection bots (Cat Bot and similar pet/gacha bots) generally use the same rarity ladder:\n\n- Common\n- Uncommon\n- Rare\n- Epic\n- Legendary\n- Mythic\n\nSome versions of these bots insert an extra tier between the top two, so you may also see Divine, Secret, or Special/Event as a cap above Mythic, and seasonal cats (Valentine's, Halloween, Christmas) tagged separately regardless of base rarity.\n\nIf you meant a specific bot by the name \"Cat Bot\" rather than the genre in general, tell me which one (or its invite prefix) and I can be more precise — the exact tier names vary between bots.",
+            "correct": false,
+            "cost": 0
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "I don't have reliable information about a specific \"catnip mafia\" feature or its final boss in a Discord bot called \"Cat Bot.\" This appears to be very niche or specific content that isn't part of my knowledge, and I don't want to fabricate a name and rank that could be completely wrong.\n\nIf this is from a specific bot, your best bet would be checking the bot's official documentation, wiki, or community server where such details would likely be documented.",
+            "correct": false,
+            "cost": 0
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I don't have reliable information about an official \"Discord Cat Bot OST\" or its track list, so I can't name the closing song without making one up. There are many Discord bots with cat themes, and none has a well-documented soundtrack I can point to.\n\nIf you have the track list or a link, share it and I'll identify the last song for you.",
+            "correct": false,
+            "cost": 0
+        }
+    ]
+}

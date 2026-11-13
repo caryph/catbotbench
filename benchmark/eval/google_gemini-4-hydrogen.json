@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 1,
+    "cost": 0,
+    "time": 40,
+    "eval_model": "google/gemini-4-hydrogen",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Discord Cat Bot was created by **Milenakos**.",
+            "correct": true,
+            "cost": 0
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "You can craft the **Cat Trophy** with one of each of every cat type in Discord Cat Bot.",
+            "correct": false,
+            "cost": 0
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "The main cat types/rarities in Discord Cat Bot, ordered from most common to rarest, are:\n\n1. **Fine**\n2. **Nice**\n3. **Good**\n4. **Rare**\n5. **Wild**\n6. **Baby**\n7. **Epic**\n8. **Sus**\n9. **Brave**\n10. **Rickroll**\n11. **Reverse**\n12. **Superior**\n13. **The Trash Cat**\n14. **Legendary**\n15. **Mythic**\n16. **8bit**\n17. **Corrupt**\n18. **Professor**\n19. **Real**\n20. **Ultimate**\n21. **eGirl**",
+            "correct": false,
+            "cost": 0
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "The final boss in Discord Cat Bot's Catnip Mafia is **Don Catleone**, holding the rank of **Don** (Boss).",
+            "correct": false,
+            "cost": 0
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "I do not have reliable information on the tracklist for the Discord Cat Bot OST, so I cannot confirm what the last song is.",
+            "correct": false,
+            "cost": 0
+        }
+    ]
+}
