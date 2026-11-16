@@ -1,0 +1,39 @@
+{
+    "version": 1,
+    "score": 0,
+    "cost": 0.021586,
+    "time": 124,
+    "eval_model": "qwen/qwen4-max",
+    "data": [
+        {
+            "question": "Who made Discord Cat Bot?",
+            "response": "Cat Bot isn't an official Discord product — it's a community-made bot built by an independent developer/small team rather than by Discord Inc. My best recollection is that it's the work of the solo dev behind the Cat Bot project (catbot.gg), who built the cat-image side of it on top of Aden Forshaw's TheCatAPI, the same public cat-image service most Discord cat bots use.",
+            "correct": false,
+            "cost": 0.00731025
+        },
+        {
+            "question": "What item can you craft with each of every cat type in Discord Cat Bot?",
+            "response": "**The Cat Trophy** – it's the collection item in Cat Bot's crafting system, requiring one cat of every single cat type (common all the way up through the rarest tiers) to forge.",
+            "correct": false,
+            "cost": 0.0067944
+        },
+        {
+            "question": "List all main cat types/rarities in Discord Cat Bot.",
+            "response": "**Cat Bot – cat rarities (lowest → highest):**\n\n1. **Common** – the default spawns, by far the most frequent catches.\n2. **Uncommon** – slightly rarer, still everyday catches.\n3. **Rare** – noticeably less frequent spawns.\n4. **Epic** – uncommon enough to be worth announcing in a server.\n5. **Legendary** – low spawn chance, high trade value.\n6. **Mythic** – very rare, top-tier standard rarity.\n7. **Divine** – the highest standard tier, extremely rare spawns.\n\n**Special / non-standard categories:**\n\n- **Special** – unique cats that don't follow the normal rarity ladder (joke/meme cats, bot-staff cats, etc.).\n- **Event / Seasonal** – only obtainable during limited-time events (Halloween, Christmas, anniversaries).\n- **Exclusive** – giveaway, promo, or contributor-only cats.\n- **Variants** – altered versions of existing cats (e.g. shiny/inverted/cursed-style alternates) that count as separate collectibles.",
+            "correct": false,
+            "cost": 0.003036675
+        },
+        {
+            "question": "What are the name and rank of the final boss in Discord Cat Bot catnip mafia?",
+            "response": "I don't have reliable information on Cat Bot's catnip mafia boss lineup, so I can't give you a verified name and rank. My best guess would be a \"Catfather\"-style figure holding the top rank of Godfather/Boss — but treat that as a guess rather than a fact. Checking the bot's own wiki or its `/help` (or the catnip mafia command's info page) will give you the actual final boss's name and rank.",
+            "correct": false,
+            "cost": 0.002004975
+        },
+        {
+            "question": "What's the last song on Discord Cat Bot OST?",
+            "response": "The Discord Cat Bot OST closes out with **\"Catnap\"** — the short, mellow outro theme that plays off the main cat‑collecting loop.\n\n(That's my best recollection of the track listing; the OST is small and mostly loops of the main bot theme, with \"Catnap\" as the closing piece.)",
+            "correct": false,
+            "cost": 0.0024396
+        }
+    ]
+}
